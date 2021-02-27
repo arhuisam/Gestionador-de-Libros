@@ -11,7 +11,9 @@ class Profesor :public Usuario
 		int Cod_prof;
 		string Materia;
 	public:
-		void Imprimir_prof();
+		Profesor (int,string);
+		int getCod_prof();
+		
 };
 
 #endif
