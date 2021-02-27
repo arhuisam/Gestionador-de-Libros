@@ -1,7 +1,7 @@
 [Project]
-FileName=Gestionador Libros.dev
-Name=Gestionador Libros
-Type=0
+FileName=Gestionador de libros.dev
+Name=Gestionador de libros
+Type=1
 Ver=2
 ObjFiles=
 Includes=
