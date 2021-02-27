@@ -1,10 +1,17 @@
 #ifndef PROFESOR_H
 #define PROFESOR_H
 
-class Profesor
+#include <string>
+#include <vector>
+#include "Usuario.h"
+
+class Profesor :public Usuario
 {
-	public:
 	protected:
+		int Cod_prof;
+		string Materia;
+	public:
+		void Imprimir_prof();
 };
 
 #endif

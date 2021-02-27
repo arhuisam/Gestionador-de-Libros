@@ -1,10 +1,17 @@
 #ifndef REVISTA_H
 #define REVISTA_H
 
-class Revista
+#include <string>
+#include <vector>
+#include "Material.h"
+class Revista :public Material
 {
-	public:
 	protected:
+		string Anio;
+		string Volumen;
+		int numero;
+	public:
+		void Imprimir()
 };
 
 #endif

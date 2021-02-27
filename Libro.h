@@ -1,10 +1,19 @@
 #ifndef LIBRO_H
 #define LIBRO_H
 
-class Libro
+#include <string>
+#include <iostream>
+#include <vector>
+#include "Material.h"
+using namespace std;
+
+class Libro:public Material
 {
-	public:
 	protected:
+		string edicional;
+		string ciudad;
+	public:
+		 void Imprimir();	
 };
 
 #endif
