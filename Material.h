@@ -11,14 +11,16 @@ class Material
 	protected:
 		string Titulo;
 		string Autor;
-		string Catgoria;
+		string Categoria;
 		string Editorial;
 	public:
+		Material(string,string,string,string);
+		string getTitulo();
 		string Asignar_group();
 		void Crear();
 		void Modificiar();
 		void Eliminar();
-		void Mostar();
+		virtual void Mostar();
 };
 
 #endif

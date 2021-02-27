@@ -16,12 +16,12 @@ class Usuario
 		string DNI;
 		vector<Estanteria*> listaEstanteria; //variable de composici�n
 	public:
+
 		void crear();
 		void modifficar();
 		void eliminar();
 		void mostrar();
 		void imprimir();
-
 };
 
 #endif
