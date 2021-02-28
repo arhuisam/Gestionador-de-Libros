@@ -5,15 +5,18 @@
 #include <vector>
 #include "Usuario.h"
 
+class Material;
 class Profesor :public Usuario
 {
 	protected:
 		int Cod_prof;
-		string Materia;
+		vector<Material*>listaMaterial;
 	public:
-		Profesor (int,string);
+		Profesor (string,string,string);
 		int getCod_prof();
-		
+		void aniadirMaterial(Material*);
+		void mostrarDatos();
+
 };
 
 #endif

@@ -2,7 +2,15 @@
 #include <string>
 using namespace std;
 
-Profesor::Profesor(int Cod_prof,string Materia) : Usuario(nombres, apellidos, DNI)
+Profesor::Profesor(string nombres,string apellidos,string DNI ) : Usuario(nombres, apellidos, DNI)
 {
-    
+    nombres=nombres;
+    apellidos=apellidos;
+    DNI=DNI;
+}
+void Profesor ::aniadirMaterial(Material* mat){
+    listaMaterial.push_back(mat);
+}
+void Profesor::mostrarDatos(){
+        Usuario::mostrarDatos();
 }
