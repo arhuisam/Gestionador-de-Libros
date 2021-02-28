@@ -18,11 +18,7 @@ class Estanteria
 	protected:
 		vector<Usuario*>listaUsuarios
 		
-	public:
-		void crear();
-		void modificar();
-		void eliminar();
-		void asignarUsuario();
+
 };
 
 #endif
