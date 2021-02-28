@@ -11,6 +11,8 @@ Material::Material(string titulo,string autor,string categoria,string editorial,
 	Autor = autor;
 	Categoria = categoria;
 	Editorial = editorial;
+	profesor = pro;
+	alumno = alu;
 }
 
 string Material::getTitulo(){
@@ -20,6 +22,6 @@ string Material::getAutor(){
 	return Autor;
 }
 void Material::mostrarDatos(){
-	
+
 }
 

@@ -19,7 +19,7 @@ class Material
 		Alumno*alumno;
 
 	public:
-		Material(string nombre,string autor,string categoria,string editorial,Profesor *,Alumno *);
+		Material(string ,string ,string ,string ,Profesor * ,Alumno *);
 		string getTitulo();
 		string getAutor();
 		void mostrarDatos();
