@@ -12,7 +12,7 @@ class Profesor :public Usuario
 		int Cod_prof;
 		vector<Material*>listaMaterial;
 	public:
-		Profesor (string,string,string);
+		Profesor (string,string,string,int);
 		int getCod_prof();
 		void aniadirMaterial(Material*);
 		void mostrarDatos();
