@@ -7,5 +7,5 @@ Revista::Revista(string titulo,string autor,string categoria,string editorial,Pr
     
     Anio=anio;
     Volumen=volumen;
-	numero=numero;
+	Numero=numero;
 }                               

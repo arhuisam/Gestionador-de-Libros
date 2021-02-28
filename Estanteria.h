@@ -3,15 +3,20 @@
 
 #include <string>
 #include <iostream>
-using namespace std;
-#include <string>
 #include <vector>
+using namespace std;
+
+class Material;
+class Usuario;
+class Revista;
+class Libro;
+class Usuario;
+
 
 class Estanteria
 {
 	protected:
-		string Nombre;
-		int nMaterial;
+		vector<
 		
 	public:
 		void crear();

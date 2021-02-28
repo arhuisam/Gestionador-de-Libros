@@ -9,7 +9,7 @@ class Revista :public Material
 	protected:
 		string Anio;
 		string Volumen;
-		int numero;
+		int Numero;
 	public:
 		Revista(string ,string ,string ,string ,Profesor * ,Alumno *,string,string,int);
 };

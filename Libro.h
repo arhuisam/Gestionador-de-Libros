@@ -10,8 +10,8 @@ using namespace std;
 class Libro:public Material
 {
 	protected:
-		string edicion;
-		string ciudad;
+		string Edicion;
+		string Ciudad;
 	public:
 		 Libro(string ,string ,string ,string ,Profesor * ,Alumno *,string,string);
 };
