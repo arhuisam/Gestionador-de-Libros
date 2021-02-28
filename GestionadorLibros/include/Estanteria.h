@@ -16,8 +16,21 @@ class Usuario;
 class Estanteria
 {
 	protected:
-		vector<Usuario*>listaUsuarios
-
+		vector<Usuario*>listaUsuarios; //composicion
+		vector<Libro*>listaLibros;
+		vector<Revista*>listaRevistas;
+	public:
+	void crearLibro(string ,string ,string ,string ,string,string,string,string);
+	void crearRevista(string ,string ,string ,string ,string,string,string,string,int);
+	void agregarAlumno(string,string,string,int);
+	void agregarProfesor(string,string,string,int);
+	void mostrarLibro();
+	void mostrarRevista();
+	int buscarAlumno(string);
+	int buscarProfesor(string);
+	int buscarRevista(string);
+	int buscarLibro(string);
+	
 
 };
 

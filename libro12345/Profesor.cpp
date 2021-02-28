@@ -12,6 +12,12 @@ Profesor::Profesor(string nombres,string apellidos,string DNI,int cod_prof ) : U
 void Profesor ::aniadirMaterial(Material* mat){
     listaMaterial.push_back(mat);
 }
+/*void Profesor ::aniadirRevista(Revista* mat){
+    listaRevista.push_back(mat);
+}*/
+/*void Profesor ::aniadirLibro(Libro* mat){
+    listaLibro.push_back(mat);
+}*/
 void Profesor::mostrarDatos(){
         Usuario::mostrarDatos();
 }
