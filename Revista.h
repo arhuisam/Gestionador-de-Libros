@@ -11,7 +11,7 @@ class Revista :public Material
 		string Volumen;
 		int numero;
 	public:
-		void Imprimir();
+		Revista(string,string,int);
 };
 
 #endif
