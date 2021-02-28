@@ -10,10 +10,10 @@ using namespace std;
 class Libro:public Material
 {
 	protected:
-		string edicional;
+		string edicion;
 		string ciudad;
 	public:
-		 void Imprimir();	
+		 Libro(string ,string ,string ,string ,Profesor * ,Alumno *,string,string);
 };
 
 #endif
