@@ -16,7 +16,7 @@ class Usuario;
 class Estanteria
 {
 	protected:
-		vector<
+		vector<Usuario*>listaUsuarios
 		
 	public:
 		void crear();
