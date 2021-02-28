@@ -5,6 +5,8 @@
 #include <vector>
 using namespace std;
 
+class Profesor;
+class Alumno;
 
 class Material
 {
@@ -13,14 +15,15 @@ class Material
 		string Autor;
 		string Categoria;
 		string Editorial;
+		Profesor *profesor;
+		Alumno*alumno;
+
 	public:
-		Material(string,string,string,string);
+		Material(string nombre,string autor,string categoria,string editorial,Profesor *,Alumno *);
 		string getTitulo();
-		string Asignar_group();
-		void Crear();
-		void Modificiar();
-		void Eliminar();
-		virtual void Mostar();
+		string getAutor();
+		void mostrarDatos();
+	
 };
 
 #endif
