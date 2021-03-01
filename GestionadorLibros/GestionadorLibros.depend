@@ -1,4 +1,86 @@
 # depslib dependency file v1.0
-1584205420 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\main.cpp
+1614558272 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\main.cpp
 	<iostream>
+	"Profesor.h"
+	"Estanteria.h"
+	"Libro.h"
+	"Alumno.h"
+	"Profesor.h"
+	"Estanteria.h"
+	"Material.h"
+	"Usuario.h"
+	"Revista.h"
+
+1614549512 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\libro.cpp
+	"Libro.h"
+	<iostream>
+	<string>
+
+1614549496 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\libro.h
+	<string>
+	<iostream>
+	<vector>
+	"Material.h"
+
+1614549607 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\material.h
+	<string>
+	<iostream>
+	<vector>
+
+1614549583 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\material.cpp
+	"Material.h"
+	<string>
+	<iostream>
+	<sstream>
+
+1614549723 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\revista.cpp
+	"Revista.h"
+	<iostream>
+	<string>
+
+1614549736 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\revista.h
+	<string>
+	<vector>
+	"Material.h"
+
+1614557915 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\alumno.cpp
+	"Alumno.h"
+	<string>
+
+1614557902 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\alumno.h
+	"Usuario.h"
+	<string>
+	<vector>
+
+1614557599 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\usuario.h
+	<string>
+	<iostream>
+	<vector>
+
+1614558342 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\estanteria.cpp
+	"Estanteria.h"
+	"Usuario.h"
+	"Alumno.h"
+	"Profesor.h"
+	"Material.h"
+	"Revista.h"
+	"Libro.h"
+
+1614552395 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\estanteria.h
+	<string>
+	<iostream>
+	<vector>
+
+1614556515 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\profesor.h
+	<string>
+	<vector>
+	"Usuario.h"
+
+1614557806 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\profesor.cpp
+	"Profesor.h"
+	<string.h>
+
+1614557656 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\usuario.cpp
+	"Usuario.h"
+	<string.h>
 

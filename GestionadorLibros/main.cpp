@@ -22,7 +22,7 @@ int main(){
     cout<<"1. Registrar usuario"<<endl;
     cout<<"2. Ingresar material"<<endl;
     cout<<"3. Crear";
-    cin>>y;
+    cin>>x;
     switch(x)
     {
     case 1:    
@@ -44,6 +44,7 @@ int main(){
     break;
     case 2:
 
+    break;
     }
     return 0;
 }
