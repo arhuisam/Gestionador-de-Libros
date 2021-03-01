@@ -14,8 +14,15 @@ using namespace std;
 }*/
 
 
-void Estanteria :: crearRevista(string titulo,string autor,string categoria,string editorial,string cod_prof,string cod_alu,string anio,string volumen,int numero) {
+/*void Estanteria :: relacionarRevista(string titulo,string autor,string categoria,string editorial,string cod_prof,string cod_alu,string anio,string volumen,int numero) {
 
+}*/
+void Estanteria :: registrarEstanteria(){
+    cout<<"Ingrese nombre de la estanteria: "<<endl;
+    cin>>Nombre;
+    cout<<""<<endl;
 
 }
+
+
 

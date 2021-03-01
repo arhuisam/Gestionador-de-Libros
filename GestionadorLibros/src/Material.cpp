@@ -21,9 +21,7 @@ string Material::getTitulo(){
 string Material::getAutor(){
 	return Autor;
 }
-void Material::mostrarDatos(){
 
-}
 void Material::registrarMaterial(){
 	cout<<"Ingrese el titulo :";
 	cin>>Titulo;

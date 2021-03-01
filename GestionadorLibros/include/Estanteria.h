@@ -16,6 +16,7 @@ class Usuario;
 class Estanteria
 {
 	protected:
+		string Nombre;
 		vector<Usuario*>listaUsuarios; //composicion
 		vector<Libro*>listaLibros;
 		vector<Revista*>listaRevistas;
@@ -30,6 +31,7 @@ class Estanteria
 	int buscarProfesor(string);
 	int buscarRevista(string);
 	int buscarLibro(string);
+	void registrarEstanteria();
 	
 
 };

@@ -13,6 +13,7 @@ class Revista :public Material
 	public:
 		////Revista(string ,string ,string ,string ,Profesor * ,Alumno *,string,string,int);
 		void registrarRevista();
+		void mostrarDatos();
 };
 
 #endif

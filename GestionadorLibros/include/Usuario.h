@@ -18,8 +18,9 @@ class Usuario
 		string getNombre();
 		string getApellidos();
 		string getDNI();
-		virtual void mostrarDatos();
+		virtual void mostrarDatos()=0;
 		void registrar();
+		void modificar();
 };
 
 #endif

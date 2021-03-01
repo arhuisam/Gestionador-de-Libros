@@ -15,6 +15,7 @@ class Libro:public Material
 	public:
 		 ////Libro(string ,string ,string ,string ,Profesor * ,Alumno *,string,string);
 		 void registrarLibro();
+		 void MostrarLibro();
 };
 
 #endif
