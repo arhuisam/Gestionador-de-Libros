@@ -141,22 +141,22 @@ int main(){
                             cout<<setw(15)<<"RUC";
                             cout<<setw(10)<<"DNI";
                             cout<<endl;
-                            for(int i = 0; i <  nLibros; i++){
+                            for(int i = 0; i <  nRevistas; i++){
                                 cout<<left<<setw(3)<<i+1;
-                                listaLibro[i].mostrarDatos();
+                                listaRevista[i].mostrarDatos();
                                 cout<<endl;   
                             }
                             cout<<"Ingrese el (#) del libro que desea modificar :";
                             cin>>aux;
-                            if(aux>0 && aux<=nLibros){
-                                listaLibro[aux-1].modificar();
+                            if(aux>0 && aux<=nRevistas){
+                                listaRevista[aux-1].modificar();
                                 cout<<endl<<"Modificacion exitosa "<<endl<<endl;
                             }else{
-                            cout<<"No existe el libro que intenta modificar "<<endl;
+                            cout<<"No existe la revista que intenta modificar "<<endl;
                             }   
                         
                         }else{
-                        cout<<"No hay libros registrados "<<endl;
+                        cout<<"No hay revistas registradas "<<endl;
                         }
                         
                     }
