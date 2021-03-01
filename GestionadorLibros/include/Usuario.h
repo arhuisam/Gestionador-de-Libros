@@ -15,12 +15,12 @@ class Usuario
 
 	public:
 		//Usuario(string,string,string);
-		string getNombre();
-		string getApellidos();
-		string getDNI();
-		virtual void mostrarDatos();
+		//string getNombre();
+		//string getApellidos();
+		//string getDNI();
+		void virtual mostrarDatos()=0;
 		void registrar();
-		void modificar();
+		void virtual modificar()=0;
 };
 
 #endif

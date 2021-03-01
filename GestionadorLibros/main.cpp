@@ -12,16 +12,19 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
 
     Estanteria estanteria;
-    int x, y, z, w, nProf=0, nAlum=0,nLibros=0,nRevistas=0,nEstanteria=0,aux=0;
+    int x=0, y=0, z, s, v, w, nProf=0, nAlum=0,nLibros=0,nRevistas=0,nEstanteria=0,aux=0;
     string cod,nombres;
     Profesor listaProfesor[20];
     Alumno listaAlumno[20];
     Revista listaRevista[20];
     Libro listaLibro[20];
     Estanteria listaEstanteria[20];
+    do
+    {
     cout<<"Que accion desea realizar:"<<endl;
     cout<<"1. Registrar usuario"<<endl;
     cout<<"2. Ingresar material"<<endl;
@@ -29,57 +32,77 @@ int main(){
     cout<<"4. Modificar datos"<<endl;
     cout<<"5. Mostrar Lista "<<endl;
     cout<<"6. Imprimir datos"<<endl; //colocarlos en txts
+    cout<<"7. Finalizar"<<endl;
     cin>>x;
     switch(x)
     {
-    case 1:    
-        cout<<"Que tipo de usuario desea ingresar?"<<endl;
-        cout<<"1. Profesor"<<endl;
-        cout<<"2. Alumno"<<endl;
-        cin>>y;
-        switch(y)
+    case 1:
+        do
         {
-        case 1:
-            nProf++;
-            listaProfesor[nProf].registrarprofesor();
-        break;
-        case 2:
-            nAlum++;
-            listaAlumno[nAlum].registrarAlumno();
-        break;
-        }
+            cout<<"Que tipo de usuario desea ingresar?"<<endl;
+            cout<<"1. Profesor"<<endl;
+            cout<<"2. Alumno"<<endl;
+            cout<<"3. Retroseder"<<endl;
+            cin>>y;
+            switch(y)
+            {
+                case 1:
+                    nProf++;
+                    listaProfesor[nProf].registrar();
+                break;
+                case 2:
+                    nAlum++;
+                    listaAlumno[nAlum].registrar();
+                break;
+                case 3:
+                    cout<<"retrosediendo...";
+                break;
+                default:
+                    cout<<"DESICION INVALIDA";
+                break;
+            }
+        }while(y!=3);
     break;
     case 2:
-    cout<<"Que tipo de material desea ingresar?"<<endl;
+        do
+        {
+        cout<<"Que tipo de material desea ingresar?"<<endl;
         cout<<"1. Libro"<<endl;
         cout<<"2. Revista"<<endl;
+        cout<<"3. Retroseder"<<endl;
         cin>>y;
         switch(y)
         {
-        case 1:
-            nRevistas++;
-            listaRevista[nRevistas].registrarRevista();
-        break;
-        case 2:
-            nLibros++;
-            listaLibro[nLibros].registrarLibro();
-        break;
+            case 1:
+                nRevistas++;
+                listaRevista[nRevistas].registrarRevista();
+            break;
+            case 2:
+                nLibros++;
+                listaLibro[nLibros].registrarLibro();
+            break;
+            case 3:
+                cout<<"Retrosediendo..."<<endl;
+            break;
+            default:
+                cout<<"DESICION INVALIDA"<<endl;
+            break;
         }
-
+        } while (y!=3);
     break;
     case 3:
         //asignarle a un usuario
         nEstanteria++;
-        listaEstanteria[nEstanteria].registrarEstanteria();  
-
-
+        listaEstanteria[nEstanteria].registrarEstanteria();
     break;
     case 4:
+        do
+        {
         cout<<"Que datos desea cambiar?"<<endl;
         cout<<"1. Usuario"<<endl;
         cout<<"2. Material"<<endl;
         cout<<"3. Estanteria"<<endl;
-        //mostrar lista del dato escogido
+        cout<<"4. Retroceder"<<endl;
         cin>>w;
         switch(w)
         {
@@ -102,7 +125,7 @@ int main(){
                     {
                         cout<<left<<setw(3)<<i+1;
                         listaProfesor[i].mostrarDatos();
-                        cout<<endl;   
+                        cout<<endl;
                     }
                     cout<<"Ingrese el (#) del profesor que desea modificar :";
                     cin>>aux;
@@ -114,14 +137,14 @@ int main(){
                     else
                     {
                         cout<<"No existe el Profesor que intenta modificar "<<endl;
-                    }   
+                    }
                 }
                 else
                 {
                     cout<<"No hay Profesores registrados "<<endl;
                 }
-            }          
-            else 
+            }
+            else
             if(w==2)
             {
                 if(nAlum!=0 )
@@ -139,7 +162,7 @@ int main(){
                     {
                         cout<<left<<setw(3)<<i+1;
                         listaAlumno[i].mostrarDatos();
-                        cout<<endl;   
+                        cout<<endl;
                     }
                     cout<<"Ingrese el (#) del alumno que desea modificar :";
                     cin>>aux;
@@ -151,12 +174,12 @@ int main(){
                     else
                     {
                         cout<<"No existe el alumno que intenta modificar "<<endl;
-                    }            
+                    }
                 }
                 else
                 {
                     cout<<"No hay alumnos registradas "<<endl;
-                }   
+                }
             }
         break;
         case 2:
@@ -180,7 +203,7 @@ int main(){
                     {
                         cout<<left<<setw(3)<<i+1;
                         listaLibro[i].mostrarDatos();
-                        cout<<endl;   
+                        cout<<endl;
                     }
                     cout<<"Ingrese el (#) del libro que desea modificar :";
                     cin>>aux;
@@ -191,8 +214,8 @@ int main(){
                     }
                     else
                     {
-                        cout<<"No existe el libro que intenta modificar "<<endl;   
-                    }          
+                        cout<<"No existe el libro que intenta modificar "<<endl;
+                    }
                 }
                 else
                 {
@@ -216,7 +239,7 @@ int main(){
                     {
                         cout<<left<<setw(3)<<i+1;
                         listaRevista[i].mostrarDatos();
-                        cout<<endl;   
+                        cout<<endl;
                     }
                     cout<<"Ingrese el (#) del libro que desea modificar :";
                     cin>>aux;
@@ -228,18 +251,25 @@ int main(){
                     else
                     {
                     cout<<"No existe la revista que intenta modificar "<<endl;
-                    }   
+                    }
                 }
                 else
                 {
                     cout<<"No hay revistas registradas "<<endl;
-                } 
+                }
             }
         break;
         case 3:
-            cout<<"Cambiando estanteria...";     
+            cout<<"Cambiando estanteria..."<<endl;
+        break;
+        case 4:
+            cout<<"Retrocediendo..."<<endl;
+        break;
+        default:
+            cout<<"DESICION INVALIDA"<<endl;
         break;
         }
+        } while (w!=4);    
     break;
     case 5:
     cout<<"Cuales tipos de datos desea mostrar?"<<endl;
@@ -249,18 +279,40 @@ int main(){
     switch(v)
     {
         case 1:
-            cout<<"Cual tipo de usuario?"<<endl;
+            cout<<"Cual tipo de usuario desea mostrar?"<<endl;
             cout<<"1. Profesor"<<endl;
             cout<<"2. Alumno"<<endl;
-                switch()
+            switch(s)
+            {
+                case 1:
+                break;
+                case 2:
+                break;
+            }
         break;
         case 2:
+            cout<<"Cual tipo de material desea mostrar?"<<endl;
+            cout<<"1. Libro"<<endl;
+            cout<<"2. Revista"<<endl;
+            switch(s)
+            {
+                case 1:
 
+                break;
+                case 2:
+                break;
+            }
         break;
         case 3:
 
         break;
     }
+    case 6:
+    break;
+    case 7:
+        cout<<"Finalizando...";
+    break;
 }
+} while (x!=7);
 return 0;
 }

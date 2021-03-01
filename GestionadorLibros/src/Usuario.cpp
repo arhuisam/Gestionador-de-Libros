@@ -7,7 +7,7 @@ using namespace std;
 		apellidos=apellidos;
 		DNI=DNI;
 }*/
-string Usuario::getNombre(){
+/*string Usuario::getNombre(){
     return nombres;
 }
 string Usuario:: getApellidos(){
@@ -16,7 +16,7 @@ string Usuario:: getApellidos(){
 }
 string Usuario::getDNI(){
     return DNI;
-}
+}*/
 void Usuario ::registrar(){
     cout<<"Ingrese su nombre :";
     //cin.ignore();

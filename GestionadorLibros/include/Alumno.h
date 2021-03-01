@@ -16,7 +16,8 @@ class Alumno:public Usuario
 		int getCod_alu();
 		void aniadirMaterial(Material*);
 		void mostrarDatos();
-		void registrarAlumno();
+		void registrar();
+		void modificar();
 };
 
 #endif

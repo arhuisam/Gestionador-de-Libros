@@ -16,7 +16,8 @@ class Profesor :public Usuario
 		int getCod_prof();
 		void aniadirMaterial(Material*);
 		void mostrarDatos();
-		void registrarprofesor();
+		void registrar();
+		void modificar();
 
 };
 
