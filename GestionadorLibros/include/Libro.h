@@ -13,7 +13,8 @@ class Libro:public Material
 		string Edicion;
 		string Ciudad;
 	public:
-		 Libro(string ,string ,string ,string ,Profesor * ,Alumno *,string,string);
+		 ////Libro(string ,string ,string ,string ,Profesor * ,Alumno *,string,string);
+		 void registrarLibro();
 };
 
 #endif

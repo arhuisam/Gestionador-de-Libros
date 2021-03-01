@@ -11,34 +11,34 @@
 	"Usuario.h"
 	"Revista.h"
 
-1614549512 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\libro.cpp
+1614561022 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\libro.cpp
 	"Libro.h"
 	<iostream>
 	<string>
 
-1614549496 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\libro.h
+1614561100 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\libro.h
 	<string>
 	<iostream>
 	<vector>
 	"Material.h"
 
-1614549607 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\material.h
+1614561103 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\material.h
 	<string>
 	<iostream>
 	<vector>
 
-1614549583 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\material.cpp
+1614560666 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\material.cpp
 	"Material.h"
 	<string>
 	<iostream>
 	<sstream>
 
-1614549723 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\revista.cpp
+1614560926 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\revista.cpp
 	"Revista.h"
 	<iostream>
 	<string>
 
-1614549736 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\revista.h
+1614561097 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\revista.h
 	<string>
 	<vector>
 	"Material.h"
@@ -47,7 +47,7 @@
 	"Alumno.h"
 	<string>
 
-1614557902 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\alumno.h
+1614559646 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\alumno.h
 	"Usuario.h"
 	<string>
 	<vector>

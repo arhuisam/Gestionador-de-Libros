@@ -11,7 +11,8 @@ class Revista :public Material
 		string Volumen;
 		int Numero;
 	public:
-		Revista(string ,string ,string ,string ,Profesor * ,Alumno *,string,string,int);
+		////Revista(string ,string ,string ,string ,Profesor * ,Alumno *,string,string,int);
+		void registrarRevista();
 };
 
 #endif
