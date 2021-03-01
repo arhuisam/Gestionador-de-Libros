@@ -12,11 +12,11 @@ class Alumno:public Usuario
 		int Cod_Alu;
 		vector<Material*>listaMaterial;
 	public:
-		Alumno (string,string,string,int);
+		//Alumno (string,string,string,int);
 		int getCod_alu();
 		void aniadirMaterial(Material*);
 		void mostrarDatos();
-
+		void registrarAlumno();
 };
 
 #endif

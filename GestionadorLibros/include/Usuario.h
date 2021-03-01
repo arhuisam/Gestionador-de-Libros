@@ -14,11 +14,12 @@ class Usuario
 		string DNI;
 
 	public:
-		Usuario(string,string,string);
+		//Usuario(string,string,string);
 		string getNombre();
 		string getApellidos();
 		string getDNI();
 		virtual void mostrarDatos();
+		void registrar();
 };
 
 #endif
