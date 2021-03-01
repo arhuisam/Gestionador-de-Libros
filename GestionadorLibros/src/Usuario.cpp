@@ -27,9 +27,9 @@ void Usuario ::registrar(){
     cout<<"Ingrese su DNI :";
     cin>>DNI;
 }
-void Usuario::mostrarDatos(){
+/*void Usuario::mostrarDatos(){
     cout<<"Nombres: "<<nombres<<endl;
     cout<<"Apellidos: "<<apellidos<<endl;
     cout<<"DNI: "<<DNI<<endl;
     cout<<endl;
-}
+}*/

@@ -15,7 +15,7 @@ using namespace std;
 int main(){
 
     Estanteria estanteria;
-    int x, y, z, w, nProf=0, nAlum=0,nLibros=0,nRevistas=0,nEstanteria=0;
+    int x, y, z, w, nProf=0, nAlum=0,nLibros=0,nRevistas=0,nEstanteria=0,aux=0;
     string cod,nombres;
     Profesor listaProfesor[20];
     Alumno listaAlumno[20];
@@ -106,6 +106,34 @@ int main(){
                         if(nLibros!=0 ){
                             cout<<left;
                             cout<<setw(3)<<"#";
+                            cout<<setw(10)<<"Titulo";
+                            cout<<setw(10)<<"Autor";
+                            cout<<setw(10)<<"Categoria";
+                            cout<<setw(10)<<"Editorial";
+                            cout<<setw(10)<<"Edicion";
+                            cout<<setw(10)<<"Ciudad";
+
+                            for(int i = 0; i <  nLibros; i++){
+                                cout<<left<<setw(3)<<i+1;
+                                listaLibro[i].mostrarDatos();
+                                cout<<endl;   
+                            }
+                            cout<<"Ingrese el (#) del libro que desea modificar :";
+                            cin>>aux;
+                            if(aux>0 && aux<=nLibros){
+                                listaLibro[aux-1].modificar();
+                                cout<<endl<<"Modificacion exitosa "<<endl<<endl;
+                            }else{
+                            cout<<"No existe el libro que intenta modificar "<<endl;
+                            }   
+                        
+                        }else{
+                        cout<<"No hay libros registrados "<<endl;
+                        }
+                    }else if(w==2){
+                        if(nRevistas!=0 ){
+                            cout<<left;
+                            cout<<setw(3)<<"#";
                             cout<<setw(15)<<"Codigo";
                             cout<<setw(25)<<"Nombre";
                             cout<<setw(25)<<"Apellidos";
@@ -115,23 +143,22 @@ int main(){
                             cout<<endl;
                             for(int i = 0; i <  nLibros; i++){
                                 cout<<left<<setw(3)<<i+1;
-                                listaLibro[i].MostrarLibro();
+                                listaLibro[i].mostrarDatos();
                                 cout<<endl;   
                             }
-                            cout<<"Ingrese el (#) delcliente que desea modificar :";
+                            cout<<"Ingrese el (#) del libro que desea modificar :";
                             cin>>aux;
-                            if(aux>0 && aux<=nCli){
-                                listaCliente[aux-1].Modificar();
+                            if(aux>0 && aux<=nLibros){
+                                listaLibro[aux-1].modificar();
                                 cout<<endl<<"Modificacion exitosa "<<endl<<endl;
                             }else{
-                            cout<<"No existe el cliente que intenta modificar "<<endl;
+                            cout<<"No existe el libro que intenta modificar "<<endl;
                             }   
                         
                         }else{
-                        cout<<"No hay clientes registrados "<<endl;
+                        cout<<"No hay libros registrados "<<endl;
                         }
-                    }else{
-                        //cuando es 2
+                        
                     }
                 break;
                 case 3:

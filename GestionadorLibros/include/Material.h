@@ -22,8 +22,10 @@ class Material
 		//Material(string ,string ,string ,string ,Profesor * ,Alumno *);
 		string getTitulo();
 		string getAutor();
-		virtual void mostrarDatos()=0;
-		void registrarMaterial();
+		void  virtual registrar();
+		void virtual mostrarDatos()=0;
+		void virtual modificar()=0;
+		
 
 };
 

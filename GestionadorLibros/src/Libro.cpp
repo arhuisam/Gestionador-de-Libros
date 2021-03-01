@@ -3,7 +3,7 @@
 #include <string>
 #include <iomanip>
 using namespace std;
-#include ""
+
 
 /*Libro::Libro(string titulo,string autor,string categoria,string editorial,Profesor *pro,Alumno *alu,string edicion,string ciudad) :Material(titulo,autor,categoria,editorial,pro,alu){
 
@@ -11,22 +11,23 @@ using namespace std;
     Ciudad=ciudad;
 }*/
 void Libro::registrarLibro(){
-    Material::registrarMaterial();
+    Material::registrar();
     cout<<"Ingrese edicion :";
     cin>>Edicion;
     cout<<"Ingrese ciudad :";
     cin>>Ciudad;
    
 }
-void Libro::MostrarLibro(){
+void Libro::mostrarDatos(){
     cout<<left;
     cout<<setw(10)<<Titulo;
-    cout<<setw(10)<<Autor
+    cout<<setw(10)<<Autor;
+    cout<<setw(10)<<Categoria;
+    cout<<setw(10)<<Editorial;
+    cout<<setw(10)<<Edicion;
+    cout<<setw(10)<<Ciudad;
 
-
-
-		string Autor;
-		string Categoria;
-		string Editorial;
-
+}
+void Libro::modificar(){
+    Libro::registrar();
 }

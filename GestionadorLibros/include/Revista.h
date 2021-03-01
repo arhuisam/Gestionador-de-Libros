@@ -14,6 +14,7 @@ class Revista :public Material
 		////Revista(string ,string ,string ,string ,Profesor * ,Alumno *,string,string,int);
 		void registrarRevista();
 		void mostrarDatos();
+		void modificar();
 };
 
 #endif

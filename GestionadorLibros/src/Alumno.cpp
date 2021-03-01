@@ -14,7 +14,7 @@ void Alumno ::aniadirMaterial(Material* mat){
     listaMaterial.push_back(mat);
 }
 void Alumno::mostrarDatos(){
-        Usuario::mostrarDatos();
+       
 }
 void Alumno::registrarAlumno(){
     Usuario::registrar();
