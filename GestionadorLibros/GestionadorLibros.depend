@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1614579441 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\main.cpp
+1614652810 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\main.cpp
 	<iostream>
 	"Profesor.h"
 	"Estanteria.h"
@@ -46,12 +46,12 @@
 	<vector>
 	"Material.h"
 
-1614580586 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\alumno.cpp
+1614652985 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\alumno.cpp
 	"Alumno.h"
 	<iomanip>
 	<string>
 
-1614580302 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\alumno.h
+1614652905 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\alumno.h
 	"Usuario.h"
 	<string>
 	<vector>
@@ -70,17 +70,19 @@
 	"Revista.h"
 	"Libro.h"
 
-1614562638 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\estanteria.h
+1614653234 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\estanteria.h
 	<string>
 	<iostream>
 	<vector>
+	<Alumno.h>
+	<Profesor.h>
 
-1614580202 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\profesor.h
+1614650631 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\profesor.h
 	<string>
 	<vector>
 	"Usuario.h"
 
-1614580463 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\profesor.cpp
+1614650656 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\profesor.cpp
 	"Profesor.h"
 	<string.h>
 	<iomanip>

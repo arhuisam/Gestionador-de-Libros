@@ -16,7 +16,7 @@ int main()
 {
 
     Estanteria estanteria;
-    int x=0, y=0, z, s, v, w, nProf=0, nAlum=0,nLibros=0,nRevistas=0,nEstanteria=0,aux=0;
+    int x=0, y=0, z, s, v, w,ind=0, nProf=0, nAlum=0,nLibros=0,nRevistas=0,nEstanteria=0,aux=0;
     string cod,nombres;
     Profesor listaProfesor[20];
     Alumno listaAlumno[20];
@@ -91,12 +91,13 @@ int main()
         } while (y!=3);
     break;
     case 3:
-        if(nEstanteria!=0){
+    
             listaEstanteria[nEstanteria].registrar();
             cout<<"Que tipo de usuario desea asignarle "<<endl;
-            cout<<"Profesor =1/Alumno =2";
+            cout<<"(Profesor =1/Alumno =2) :";
             cin>>aux;
             if(aux==1){
+                if(nProf!=0){
                 cout<<setw(3)<<"#";
                 cout<<setw(10)<<"Nombre";
                 cout<<setw(10)<<"Apellido";
@@ -108,17 +109,62 @@ int main()
                     listaProfesor[i].mostrarDatos();
                     cout<<endl;
                     }
-            }else if(aux==2){
+                    do{
+                        cout<<"Ingrese numero (#) :";cin>>ind;
+                        if(nProf<ind or 0==ind){
+                            cout<<"El profesor que intenta asignar no existe "<<endl;
+                        }else{
+                            cout<<endl;cout<<"Asignado Profesor correctamente"<<endl;
+                        }
+
+                    }while(nProf<ind or 0==ind);
+                    listaEstanteria[nEstanteria].asignarProfesor(&listaProfesor[ind-1]);
+                    listaProfesor[ind-1].agregarEstanteria(&listaEstanteria[nEstanteria]);
+                    cout<<"Registro exitoso"<<endl;
+                    nEstanteria++;
+                }else{
+                cout<<"No hay profesores registrado";
+                }                   
+            }else if(aux==2){ ////CAMVIAR
+                if(nProf!=0){
+                    cout<<left;
+                    cout<<setw(3)<<"#";
+                    cout<<setw(10)<<"Nombre";
+                    cout<<setw(10)<<"Apellido";
+                    cout<<setw(10)<<"DNI";
+                    cout<<setw(10)<<"Codigo";
+                    cout<<endl;
+                for(int i = 0; i <  nAlum; i++)
+                    {
+                    cout<<left<<setw(3)<<i+1;
+                    listaAlumno[i].mostrarDatos();
+                    cout<<endl;
+                    }
+                    do{
+                        cout<<"Ingrese numero (#) :";cin>>ind;
+                        if(nProf<ind or 0==ind){
+                            cout<<"El alumno que intenta asignar no existe "<<endl;
+                        }else{
+                            cout<<endl;cout<<"Asignado Alumno correctamente"<<endl;
+                        }
+
+                    }while(nAlum<ind or 0==ind);
+                    listaEstanteria[nEstanteria].asignarAlumno(&listaAlumno[ind-1]);
+                    listaAlumno[ind-1].agregarEstanteria(&listaEstanteria[nEstanteria]);
+                    cout<<"Registro exitoso"<<endl;
+                    nEstanteria++;
+                }else{
+                cout<<"No hay Alumno registrado";
+                }     
 
             }else{
-                cout<<"Asignacion invalida!!";
+                cout<<"DESICION INVALIDA";
             }
 
 
-        }
+        
         //asignarle a un usuario
-        nEstanteria++;
-        listaEstanteria[nEstanteria].registrarEstanteria();
+
     break;
     case 4:
         do
@@ -308,6 +354,7 @@ int main()
                 cout<<"Cual tipo de usuario desea mostrar?"<<endl;
                 cout<<"1. Profesor"<<endl;
                 cout<<"2. Alumno"<<endl;
+                cout<<"3. Retroceder"<<endl;
             switch(s)
             {
                 case 1:

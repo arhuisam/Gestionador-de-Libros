@@ -10,9 +10,9 @@ using namespace std;
     DNI=DNI;
     Cod_prof=cod_prof;
 }*/
-void Profesor ::aniadirMaterial(Material* mat){
+/*void Profesor ::aniadirMaterial(Material* mat){
     listaMaterial.push_back(mat);
-}
+}*/
 void Profesor::mostrarDatos(){
     cout<<left;
     cout<<setw(10)<<nombres;
@@ -28,4 +28,8 @@ void Profesor ::registrar(){
 }
 void Profesor ::modificar(){
     Profesor::registrar();
+}
+void Profesor :: agregarEstanteria(Estanteria *E){
+    estanteria[nEstanteria] = E;
+    nEstanteria = nEstanteria+1;
 }

@@ -11,11 +11,11 @@ using namespace std;
     DNI=DNI;
     Cod_Alu=cod_alu;
 }*/
-void Alumno ::aniadirMaterial(Material* mat){
+/*void Alumno ::aniadirMaterial(Material* mat){
     listaMaterial.push_back(mat);
-}
+}*/
 void Alumno::mostrarDatos(){
-        cout<<left;
+    cout<<left;
     cout<<setw(10)<<nombres;
     cout<<setw(10)<<apellidos;
     cout<<setw(10)<<DNI;
@@ -30,4 +30,8 @@ void Alumno::registrar(){
 }
 void Alumno::modificar(){
     Usuario::registrar();
+}
+void Alumno :: agregarEstanteria(Estanteria *E){
+    estanteria[nEstanteria]=E;
+    nEstanteria = nEstanteria+1;
 }
