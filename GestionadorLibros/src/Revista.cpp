@@ -28,6 +28,7 @@ void Revista::mostrarDatos(){
     cout<<setw(10)<<Editorial;
     cout<<setw(10)<<Anio;
     cout<<setw(10)<<Volumen;
+    cout<<setw(10)<<Numero;
 
 }
 void Revista::modificar(){

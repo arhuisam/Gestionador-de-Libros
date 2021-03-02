@@ -56,9 +56,13 @@ int main()
                 break;
                 case 3:
                     cout<<"retrosediendo...";
+                    system("PAUSE");
+				    system("CLS");
                 break;
                 default:
                     cout<<"DESICION INVALIDA";
+                    system("PAUSE");
+				    system("CLS");
                 break;
             }
         }while(y!=3);
@@ -83,9 +87,13 @@ int main()
             break;
             case 3:
                 cout<<"Retrosediendo..."<<endl;
+                system("PAUSE");
+				system("CLS");
             break;
             default:
                 cout<<"DESICION INVALIDA"<<endl;
+                system("PAUSE");
+				system("CLS");
             break;
         }
         } while (y!=3);
@@ -158,6 +166,8 @@ int main()
 
             }else{
                 cout<<"DESICION INVALIDA";
+                system("PAUSE");
+				system("CLS");
             }
     break;
     case 4:
@@ -231,15 +241,21 @@ int main()
                     {
                         listaAlumno[aux-1].modificar();
                         cout<<endl<<"Modificacion exitosa "<<endl<<endl;
+                        system("PAUSE");
+				        system("CLS");
                     }
                     else
                     {
                         cout<<"No existe el alumno que intenta modificar "<<endl;
+                        system("PAUSE");
+				        system("CLS");
                     }
                 }
                 else
                 {
                     cout<<"No hay alumnos registradas "<<endl;
+                    system("PAUSE");
+				    system("CLS");
                 }
             }
         break;
@@ -260,6 +276,7 @@ int main()
                     cout<<setw(10)<<"Editorial";
                     cout<<setw(10)<<"Edicion";
                     cout<<setw(10)<<"Ciudad";
+                    
                     for(int i = 0; i <  nLibros; i++)
                     {
                         cout<<left<<setw(3)<<i+1;
@@ -308,15 +325,21 @@ int main()
                     {
                         listaRevista[aux-1].modificar();
                         cout<<endl<<"Modificacion exitosa "<<endl<<endl;
+                        system("PAUSE");
+				        system("CLS");
                     }
                     else
                     {
                     cout<<"No existe la revista que intenta modificar "<<endl;
+                    system("PAUSE");
+				    system("CLS");
                     }
                 }
                 else
                 {
                     cout<<"No hay revistas registradas "<<endl;
+                    system("PAUSE");
+				    system("CLS");
                 }
             }
         break;
@@ -325,9 +348,13 @@ int main()
         break;
         case 4:
             cout<<"Retrocediendo..."<<endl;
+            system("PAUSE");
+			system("CLS");
         break;
         default:
             cout<<"DESICION INVALIDA"<<endl;
+            system("PAUSE");
+			system("CLS");
         break;
         }
         } while (w!=4);    
@@ -385,13 +412,19 @@ int main()
                         listaAlumno[i].mostrarDatos();
                         cout<<endl;
                     }
+                    system("PAUSE");
+				    system("CLS");
                 }
                 break;
                 case 3:
                     cout<<"Retrocediendo..."<<endl;
+                    system("PAUSE");
+				    system("CLS");
                 break;
                 default:
                     cout<<"DESICION INVALIDA"<<endl;
+                    system("PAUSE");
+				    system("CLS");
                 break;
             }
             break;
@@ -408,6 +441,8 @@ int main()
                         case 1:
                         if(nLibros!=0)
                         {
+                            cout<<left;
+                            cout<<setw(3)<<"#";
                             cout<<setw(10)<<"Titulo";
                             cout<<setw(10)<<"Autor";
                             cout<<setw(10)<<"Categoria";
@@ -422,10 +457,14 @@ int main()
                                 cout<<endl;   
                             }
                             cout<<endl;
+                            system("PAUSE");
+				            system("CLS");
                         }
                         else
                         {
                             cout<<"No hay libros registrados "<<endl;
+                            system("PAUSE");
+				            system("CLS");
                         }
                     
                         break;
@@ -456,9 +495,13 @@ int main()
                         break;
                         case 3:
                             cout<<"Retrocediendo"<<endl;
+                            system("PAUSE");
+				            system("CLS");
                         break;
                         default:
                             cout<<"DESICION INVALIDA"<<endl;
+                            system("PAUSE");
+				            system("CLS");
                         break;
                     }
                 }while(s!=3);
@@ -468,9 +511,13 @@ int main()
             break;
             case 4:
                 cout<<"Retrocediendo..."<<endl;
+                system("PAUSE");
+				system("CLS");
             break;
             default:
                 cout<<"DESICION INVALIDA"<<endl;
+                system("PAUSE");
+				system("CLS");
             break;
         }
     } while (v!=4);

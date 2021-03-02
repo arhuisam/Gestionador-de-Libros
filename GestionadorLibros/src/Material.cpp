@@ -23,6 +23,7 @@ string Material::getAutor(){
 }
 
 void Material::registrar(){
+
 	cout<<"Ingrese el titulo :";
 	cin>>Titulo;
 	cout<<"Ingrese el autor :";

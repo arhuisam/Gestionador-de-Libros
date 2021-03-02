@@ -29,13 +29,13 @@
 	<iostream>
 	<vector>
 
-1614572744 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\material.cpp
+1614657044 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\material.cpp
 	"Material.h"
 	<string>
 	<iostream>
 	<sstream>
 
-1614573576 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\revista.cpp
+1614656818 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\revista.cpp
 	"Revista.h"
 	<iostream>
 	<string>
