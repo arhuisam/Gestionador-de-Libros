@@ -47,12 +47,12 @@ int main()
             switch(y)
             {
                 case 1:
-                    nProf++;
                     listaProfesor[nProf].registrar();
+                    nProf++;
                 break;
                 case 2:
-                    nAlum++;
                     listaAlumno[nAlum].registrar();
+                    nAlum++;
                 break;
                 case 3:
                     cout<<"retrosediendo...";
@@ -73,13 +73,13 @@ int main()
         cin>>y;
         switch(y)
         {
-            case 1:
-                nRevistas++;
+            case 1:         
                 listaRevista[nRevistas].registrarRevista();
+                nRevistas++;
             break;
             case 2:
-                nLibros++;
                 listaLibro[nLibros].registrarLibro();
+                nLibros++;
             break;
             case 3:
                 cout<<"Retrosediendo..."<<endl;
@@ -91,6 +91,31 @@ int main()
         } while (y!=3);
     break;
     case 3:
+        if(nEstanteria!=0){
+            listaEstanteria[nEstanteria].registrar();
+            cout<<"Que tipo de usuario desea asignarle "<<endl;
+            cout<<"Profesor =1/Alumno =2";
+            cin>>aux;
+            if(aux==1){
+                cout<<setw(3)<<"#";
+                cout<<setw(10)<<"Nombre";
+                cout<<setw(10)<<"Apellido";
+                cout<<setw(10)<<"DNI";
+                cout<<setw(10)<<"Codigo";
+                for(int i = 0; i <  nProf; i++)
+                    {
+                    cout<<left<<setw(3)<<i+1;
+                    listaProfesor[i].mostrarDatos();
+                    cout<<endl;
+                    }
+            }else if(aux==2){
+
+            }else{
+                cout<<"Asignacion invalida!!";
+            }
+
+
+        }
         //asignarle a un usuario
         nEstanteria++;
         listaEstanteria[nEstanteria].registrarEstanteria();
@@ -151,12 +176,10 @@ int main()
                 {
                     cout<<left;
                     cout<<setw(3)<<"#";
-                    cout<<setw(15)<<"Codigo";
-                    cout<<setw(25)<<"Nombre";
-                    cout<<setw(25)<<"Apellidos";
-                    cout<<setw(20)<<"Telefono";
-                    cout<<setw(15)<<"RUC";
+                    cout<<setw(10)<<"Nombre";
+                    cout<<setw(10)<<"Apellido";
                     cout<<setw(10)<<"DNI";
+                    cout<<setw(10)<<"Codigo";
                     cout<<endl;
                     for(int i = 0; i <  nAlum; i++)
                     {
@@ -272,47 +295,138 @@ int main()
         } while (w!=4);    
     break;
     case 5:
-    cout<<"Cuales tipos de datos desea mostrar?"<<endl;
-    cout<<"1. Usuario"<<endl;
-    cout<<"2. Material"<<endl;
-    cout<<"3. Estanteria"<<endl;
-    switch(v)
+    do
     {
-        case 1:
-            cout<<"Cual tipo de usuario desea mostrar?"<<endl;
-            cout<<"1. Profesor"<<endl;
-            cout<<"2. Alumno"<<endl;
+        cout<<"Cuales tipos de datos desea mostrar?"<<endl;
+        cout<<"1. Usuario"<<endl;
+        cout<<"2. Material"<<endl;
+        cout<<"3. Estanteria"<<endl;
+        cout<<"4. Retroceder"<<endl;
+        switch(v)
+        {
+            case 1:
+                cout<<"Cual tipo de usuario desea mostrar?"<<endl;
+                cout<<"1. Profesor"<<endl;
+                cout<<"2. Alumno"<<endl;
             switch(s)
             {
                 case 1:
+                if(nProf!=0)
+                {
+                    cout<<left;
+                    cout<<setw(3)<<"#";
+                    cout<<setw(10)<<"Nombre";
+                    cout<<setw(10)<<"Apellido";
+                    cout<<setw(10)<<"DNI";
+                    cout<<setw(10)<<"Codigo";
+                    for(int i = 0; i <  nProf; i++)
+                    {
+                    cout<<left<<setw(3)<<i+1;
+                    listaProfesor[i].mostrarDatos();
+                    cout<<endl;
+                    }
+                }
                 break;
                 case 2:
+                if(nAlum!=0)
+                {
+                    cout<<left;
+                    cout<<setw(3)<<"#";
+                    cout<<setw(10)<<"Nombre";
+                    cout<<setw(10)<<"Apellido";
+                    cout<<setw(10)<<"DNI";
+                    cout<<setw(10)<<"Codigo";
+                    cout<<endl;
+                    for(int i = 0; i <  nAlum; i++)
+                    {
+                        cout<<left<<setw(3)<<i+1;
+                        listaAlumno[i].mostrarDatos();
+                        cout<<endl;
+                    }
+
+                }
                 break;
             }
-        break;
-        case 2:
-            cout<<"Cual tipo de material desea mostrar?"<<endl;
-            cout<<"1. Libro"<<endl;
-            cout<<"2. Revista"<<endl;
-            switch(s)
-            {
-                case 1:
+            break;
+            case 2:
+                cout<<"Cual tipo de material desea mostrar?"<<endl;
+                cout<<"1. Libro"<<endl;
+                cout<<"2. Revista"<<endl;
+                switch(s)
+                {
+                    case 1:
+                    if(nLibros!=0)
+                    {
+                        cout<<setw(10)<<"Titulo";
+                        cout<<setw(10)<<"Autor";
+                        cout<<setw(10)<<"Categoria";
+                        cout<<setw(10)<<"Editorial";
+                        cout<<setw(10)<<"Edicion";
+                        cout<<setw(10)<<"Ciudad";
+                        cout<<endl;
+                        for(int i = 0; i < nLibros; i++)
+                        {
+                            cout<<left<<setw(3)<<i+1;
+                            listaLibro[i].mostrarDatos();
+                            cout<<endl;   
+                        }
+                        cout<<endl;
+                    }
+                    else
+                    {
+                        cout<<"No hay libros registrados "<<endl;
+                    }
+                    
+                    break;
+                    case 2:
+                    if(nRevistas!=0)
+                    {
+                        cout<<setw(3)<<"#";
+                        cout<<setw(10)<<"Titulo";
+                        cout<<setw(10)<<"Autor";
+                        cout<<setw(10)<<"Categoria";
+                        cout<<setw(10)<<"Editorial";
+                        cout<<setw(10)<<"Anio";
+                        cout<<setw(10)<<"Voluemn";
+                        cout<<setw(10)<<"Numero";
+                        cout<<endl;
+                        for(int i = 0; i < nRevistas; i++)
+                        {
+                            cout<<left<<setw(3)<<i+1;
+                            listaRevista[i].mostrarDatos();
+                            cout<<endl;   
+                        }
+                        cout<<endl;
+                    }
+                    else
+                    {
+                        cout<<"No hay revistas registrados "<<endl;
+                    }
+                    
+                    break;
+                }
+            break;
+            case 3:
 
-                break;
-                case 2:
-                break;
-            }
-        break;
-        case 3:
+            break;
+            case 4:
+                cout<<"Retrocediendo..."<<endl;
+            break;
+            default:
+                cout<<"DESICION INVALIDA"<<endl;
+            break;
+        }
+    } while (v!=4);
+    
 
-        break;
-    }
     case 6:
+
     break;
     case 7:
         cout<<"Finalizando...";
     break;
-}
-} while (x!=7);
-return 0;
+    }
+    }while(x!=7); //switch
+    
+    return 0;
 }
