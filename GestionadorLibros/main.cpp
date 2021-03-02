@@ -9,7 +9,9 @@
 #include "Usuario.h"
 #include "Revista.h"
 #include <iomanip>
-#include<fstream>
+#include <fstream>
+#include<stdlib.h>
+#include<stdio.h>
 
 using namespace std;
 
@@ -116,6 +118,9 @@ int main()
             break;
             case 2:
             /// faltaaa declararr
+
+
+
                 listaLibro[nLibros].registrarLibro();
                 nLibros++;
                 cout<<"Registro exitoso!"<<endl;
@@ -641,7 +646,8 @@ int main()
     
 
     case 6:
-    	do
+    	ofstream archivo;
+        do
         {
             cout<<"Cuales tipos de datos desea imprimir?"<<endl;
             cout<<"1. Usuario"<<endl;
@@ -662,11 +668,10 @@ int main()
                         switch(p)
                         {
                             case 1:
-                                ofstream archivo;
 	                            archivo.open("Profesores.txt", ios::out);
                                 for(int i = 0; i <  nProf; i++)
                                 {
-                                    archivo<<listaProfesor[i].mostrarDatos()<<endl;
+                                    archivo << listaProfesor[i].mostrarDatos()<<endl;
                                 }
                                 archivo.close();
                                 cout<<"Impresion exitosa!"<<endl;
@@ -674,7 +679,6 @@ int main()
 				                system("CLS");
                             break;
                             case 2:
-                                ofstream archivo;
 	                            archivo.open("Alumnos.txt", ios::out);
                                 for(int i = 0; i <  nAlum; i++)
                                 {
@@ -684,7 +688,7 @@ int main()
                                 cout<<"Impresion exitosa!"<<endl;
                                 system("PAUSE");
 				                system("CLS");
-                            break:
+                            break;
                             case 3:
                                 cout<<"Retrocediendo..."<<endl;
                                 system("PAUSE");
@@ -709,11 +713,10 @@ int main()
                         switch(p)
                         {
                             case 1:
-                                ofstream archivo;
 	                            archivo.open("Libros.txt", ios::out);
                                 for(int i = 0; i <  nLibros; i++)
                                 {
-                                    archivo<<listaLibros[i].mostrarDatos()<<endl;
+                                    archivo<<listaLibro[i].mostrarDatos()<<endl;
                                 }
                                 archivo.close();
                                 cout<<"Impresion exitosa!"<<endl;
@@ -721,7 +724,6 @@ int main()
 				                system("CLS");
                             break;
                             case 2:
-                                ofstream archivo;
 	                            archivo.open("Revista.txt", ios::out);
                                 for(int i = 0; i <  nRevistas; i++)
                                 {

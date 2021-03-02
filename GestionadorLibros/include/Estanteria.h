@@ -40,7 +40,7 @@ class Estanteria
 	//int cantidadlibros(Estanteria*);
 	void asignarProfesor(Profesor*);
 	void asignarAlumno(Alumno*);
-	char* getEstanteria();//para alumno o profesor
+	char* getEstanteria(); //para mostrar los materiales a q estanteria pertenece
 
 	//void crearLibro(string ,string ,string ,string ,string,string,string,string);
 	//void crearRevista(string ,string ,string ,string ,string,string,string,string,int);
