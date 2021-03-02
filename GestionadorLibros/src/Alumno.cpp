@@ -35,3 +35,7 @@ void Alumno :: agregarEstanteria(Estanteria *E){
     estanteria[nEstanteria]=E;
     nEstanteria = nEstanteria+1;
 }
+char* Alumno :: getAlumno(){
+    return nombres;
+}
+

@@ -29,6 +29,9 @@ class Estanteria
 		vector<Revista*>listaRevistas;
 	public:
 	void registrar();
+	void mostrarDatos();
+	void mostrarDatosProfe();
+	void mostrarDatosAlum();
 	//int cantidadlibros(Estanteria*);
 	void asignarProfesor(Profesor*);
 	void asignarAlumno(Alumno*);

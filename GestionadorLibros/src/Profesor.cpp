@@ -33,3 +33,6 @@ void Profesor :: agregarEstanteria(Estanteria *E){
     estanteria[nEstanteria] = E;
     nEstanteria = nEstanteria+1;
 }
+char* Profesor :: getProfesor(){
+    return nombres;
+}

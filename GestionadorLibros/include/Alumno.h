@@ -22,6 +22,7 @@ class Alumno:public Usuario
 		void registrar();
 		void modificar();
 		void agregarEstanteria(Estanteria*);
+		char* getAlumno();  
 };
 
 #endif

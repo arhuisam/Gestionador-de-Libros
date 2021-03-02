@@ -9,7 +9,7 @@ using namespace std;
 class Usuario
 {
 	protected:
-		string nombres;
+		char nombres[20];
 		string apellidos;
 		string DNI;
 

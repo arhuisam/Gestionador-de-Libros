@@ -14,7 +14,6 @@ using namespace std;
 
 int main()
 {
-
     Estanteria estanteria;
     int x=0, y=0, z, s, v, w,ind=0, nProf=0, nAlum=0,nLibros=0,nRevistas=0,nEstanteria=0,aux=0;
     string cod,nombres;
@@ -39,6 +38,7 @@ int main()
     case 1:
         do
         {
+            system("CLS");
             cout<<"Que tipo de usuario desea ingresar?"<<endl;
             cout<<"1. Profesor"<<endl;
             cout<<"2. Alumno"<<endl;
@@ -49,10 +49,16 @@ int main()
                 case 1:
                     listaProfesor[nProf].registrar();
                     nProf++;
+                    cout<<"Registro exitoso!"<<endl;
+                    system("PAUSE");
+				    system("CLS");
                 break;
                 case 2:
                     listaAlumno[nAlum].registrar();
                     nAlum++;
+                    cout<<"Registro exitoso!"<<endl;
+                    system("PAUSE");
+				    system("CLS");
                 break;
                 case 3:
                     cout<<"retrosediendo...";
@@ -70,6 +76,7 @@ int main()
     case 2:
         do
         {
+        system("CLS");
         cout<<"Que tipo de material desea ingresar?"<<endl;
         cout<<"1. Revista"<<endl;
         cout<<"2. Libro"<<endl;
@@ -80,10 +87,16 @@ int main()
             case 1:         
                 listaRevista[nRevistas].registrarRevista();
                 nRevistas++;
+                cout<<"Registro exitoso!"<<endl;
+                system("PAUSE");
+				system("CLS");
             break;
             case 2:
                 listaLibro[nLibros].registrarLibro();
                 nLibros++;
+                cout<<"Registro exitoso!"<<endl;
+                system("PAUSE");
+			    system("CLS");
             break;
             case 3:
                 cout<<"Retrosediendo..."<<endl;
@@ -99,10 +112,10 @@ int main()
         } while (y!=3);
     break;
     case 3:
-    
+            system("CLS");
             listaEstanteria[nEstanteria].registrar();
             cout<<"Que tipo de usuario desea asignarle "<<endl;
-            cout<<"(Profesor =1/Alumno =2) :";
+            cout<<"(Profesor =1/Alumno =2) :"<<endl;
             cin>>aux;
             if(aux==1){
                 if(nProf!=0){
@@ -111,6 +124,7 @@ int main()
                 cout<<setw(10)<<"Apellido";
                 cout<<setw(10)<<"DNI";
                 cout<<setw(10)<<"Codigo";
+                cout<<endl;
                 for(int i = 0; i <  nProf; i++)
                     {
                     cout<<left<<setw(3)<<i+1;
@@ -121,16 +135,24 @@ int main()
                         cout<<"Ingrese numero (#) :";cin>>ind;
                         if(nProf<ind or 0==ind){
                             cout<<"El profesor que intenta asignar no existe "<<endl;
+                            system("PAUSE");
+				            system("CLS");
                         }else{
                             cout<<endl;cout<<"Asignado Profesor correctamente"<<endl;
+                            system("PAUSE");
+				            system("CLS");
                         }
                     }while(nProf<ind or 0==ind);
                     listaEstanteria[nEstanteria].asignarProfesor(&listaProfesor[ind-1]);
                     listaProfesor[ind-1].agregarEstanteria(&listaEstanteria[nEstanteria]);
                     cout<<"Registro exitoso"<<endl;
                     nEstanteria++;
+                    system("PAUSE");
+				    system("CLS");
                 }else{
                 cout<<"No hay profesores registrado";
+                system("PAUSE");
+				system("CLS");
                 }                   
             }else if(aux==2){ ////CAMVIAR
                 if(nProf!=0){
@@ -151,8 +173,12 @@ int main()
                         cout<<"Ingrese numero (#) :";cin>>ind;
                         if(nProf<ind or 0==ind){
                             cout<<"El alumno que intenta asignar no existe "<<endl;
+                            system("PAUSE");
+				            system("CLS");
                         }else{
                             cout<<endl;cout<<"Asignado Alumno correctamente"<<endl;
+                            system("PAUSE");
+				            system("CLS");
                         }
 
                     }while(nAlum<ind or 0==ind);
@@ -160,10 +186,13 @@ int main()
                     listaAlumno[ind-1].agregarEstanteria(&listaEstanteria[nEstanteria]);
                     cout<<"Registro exitoso"<<endl;
                     nEstanteria++;
+                    system("PAUSE");
+				    system("CLS");
                 }else{
                 cout<<"No hay Alumno registrado";
+                system("PAUSE");
+				system("CLS");
                 }     
-
             }else{
                 cout<<"DESICION INVALIDA";
                 system("PAUSE");
@@ -171,6 +200,7 @@ int main()
             }
     break;
     case 4:
+        system("CLS");
         do
         {
         cout<<"Que datos desea cambiar?"<<endl;
@@ -185,6 +215,7 @@ int main()
             cout<<"Que tipo de usuario desea cambiar?"<<endl;
             cout<<"1. Profesor"<<endl;
             cout<<"2. Alumno"<<endl;
+            cout<<"3. Retroceder"<<endl;
             cin>>w;
             if(w==1)
             {
@@ -208,15 +239,21 @@ int main()
                     {
                         listaProfesor[aux-1].modificar();
                         cout<<endl<<"Modificacion exitosa "<<endl<<endl;
+                        system("PAUSE");
+				        system("CLS");
                     }
                     else
                     {
                         cout<<"No existe el Profesor que intenta modificar "<<endl;
+                        system("PAUSE");
+				        system("CLS");
                     }
                 }
                 else
                 {
                     cout<<"No hay Profesores registrados "<<endl;
+                    system("PAUSE");
+				    system("CLS");
                 }
             }else if(w==2)
             {
@@ -289,10 +326,14 @@ int main()
                     {
                         listaLibro[aux-1].modificar();
                         cout<<endl<<"Modificacion exitosa "<<endl<<endl;
+                        system("PAUSE");
+				        system("CLS");
                     }
                     else
                     {
                         cout<<"No existe el libro que intenta modificar "<<endl;
+                        system("PAUSE");
+				        system("CLS");
                     }
                 }
                 else
@@ -394,6 +435,8 @@ int main()
                     listaProfesor[i].mostrarDatos();
                     cout<<endl;
                     }
+                }else{
+                    cout<<"No hay profesores registrados"<<endl;
                 }
                 break;
                 case 2:
@@ -412,9 +455,11 @@ int main()
                         listaAlumno[i].mostrarDatos();
                         cout<<endl;
                     }
-                    system("PAUSE");
-				    system("CLS");
+                }else{
+                    cout<<"No hay Alumnos registrados"<<endl;
                 }
+     
+                
                 break;
                 case 3:
                     cout<<"Retrocediendo..."<<endl;
@@ -487,10 +532,14 @@ int main()
                                 cout<<endl;   
                             }   
                             cout<<endl;
+                            system("PAUSE");
+				            system("CLS");
                         }
                         else
                         {
                             cout<<"No hay revistas registrados "<<endl;
+                            system("PAUSE");
+				            system("CLS");
                         }
                         break;
                         case 3:
@@ -507,7 +556,51 @@ int main()
                 }while(s!=3);
             break;
             case 3:
+            cout<<"Para que tipo de usuario desea ver la estanteria "<<endl;
+            cout<<"(Profesor =1/Alumno =2) :"<<endl;
+            cin>>aux;
+            if(aux==1){
+                if(nEstanteria!=0){
+                    cout<<setw(3)<<"#";
+                    cout<<setw(10)<<"Nombre";
+                    cout<<setw(10)<<"Nombre Usuario";
+                    cout<<endl;
+                        for(int i = 0; i < nEstanteria; i++){
+                            cout<<left<<setw(3)<<i+1;
+                            listaEstanteria[i].mostrarDatosProfe();
+                            cout<<endl;   
+                        }
+                    cout<<endl;
+                    system("PAUSE");
+				    system("CLS");
+                }else{
+                cout<<"No hay estanterias registrados "<<endl;
+                system("PAUSE");
+				system("CLS");
+                }
+            }else if(aux==2){
+                                if(nEstanteria!=0){
+                    cout<<setw(3)<<"#";
+                    cout<<setw(10)<<"Nombre";
+                    cout<<setw(10)<<"Nombre Usuario";
+                    cout<<endl;
+                        for(int i = 0; i < nEstanteria; i++){
+                            cout<<left<<setw(3)<<i+1;
+                            listaEstanteria[i].mostrarDatosAlum();
+                            cout<<endl;   
+                        }
+                    cout<<endl;
+                    system("PAUSE");
+				    system("CLS");
+                }else{
+                cout<<"No hay estanterias registrados "<<endl;
+                system("PAUSE");
+				system("CLS");
+                }
 
+            }else{
+                cout<<"Opcion invalida "<<endl;
+            }
             break;
             case 4:
                 cout<<"Retrocediendo..."<<endl;

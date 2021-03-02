@@ -5,6 +5,7 @@
 #include "Material.h"
 #include "Revista.h"
 #include "Libro.h"
+#include <iomanip>
 using namespace std;
 
 /*void Estanteria::crearLibro(string titulo,string autor,string categoria,string editorial,string cod_prof,string cod_alu,string edicion,string ciudad){
@@ -30,6 +31,19 @@ void Estanteria :: asignarAlumno(Alumno* alum){
 
 char* Estanteria :: getEstanteria(){
     return Nombre;
+}
+void Estanteria :: mostrarDatos(){
+    cout<<setw(10)<<Nombre;
+
+}
+void Estanteria ::mostrarDatosProfe(){
+    Estanteria ::mostrarDatos();
+    cout<<profesor -> getProfesor();
+}
+void Estanteria :: mostrarDatosAlum(){
+    Estanteria ::mostrarDatos();
+    cout<<alumno->getAlumno();
+
 }
 
 
