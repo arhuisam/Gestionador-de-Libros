@@ -22,7 +22,7 @@ class Alumno:public Usuario
 		void registrar();
 		void modificar();
 		void agregarEstanteria(Estanteria*);
-		char* getAlumno();  
+		char* getAlumno(); //para q muestre cuando llamemos a mostrar estanteria
 };
 
 #endif

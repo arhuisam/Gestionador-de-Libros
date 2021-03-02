@@ -36,13 +36,23 @@ void Estanteria :: mostrarDatos(){
     cout<<setw(10)<<Nombre;
 
 }
+//captura el profesor
 void Estanteria ::mostrarDatosProfe(){
     Estanteria ::mostrarDatos();
     cout<<profesor -> getProfesor();
 }
+//capturar el alumno
 void Estanteria :: mostrarDatosAlum(){
     Estanteria ::mostrarDatos();
     cout<<alumno->getAlumno();
+}
+void Estanteria ::agregarRevista(Revista *revi){
+    revista[nRevistas] = revi;
+    nRevistas = nRevistas+1;
+}
+void Estanteria ::agregarLibro(Libro *lib){
+    libro[nLibros] = lib;
+    nLibros = nLibros+1;
 
 }
 

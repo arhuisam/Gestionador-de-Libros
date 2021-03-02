@@ -34,3 +34,6 @@ void Revista::mostrarDatos(){
 void Revista::modificar(){
     Material::registrar();
 }
+void Revista :: asignarEstanteria(Estanteria *estante){
+    estanteria =estante;
+}

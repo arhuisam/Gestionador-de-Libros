@@ -31,3 +31,6 @@ void Libro::mostrarDatos(){
 void Libro::modificar(){
     Libro::registrar();
 }
+void Libro:: asignarEstanteria(Estanteria*estante){
+    estanteria=estante;
+}

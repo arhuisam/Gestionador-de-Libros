@@ -20,9 +20,12 @@ class Estanteria
 {
 	protected:
 		char Nombre[20];
-		Profesor* profesor=NULL;
-		Alumno *alumno=NULL;
-		int nlibros;
+		Profesor* profesor=NULL;//para q se asigne a alumns
+		Alumno *alumno=NULL;//para  q se asigne a profes
+		Revista*revista[20];
+		Libro* libro[20];
+		int nRevistas=0;
+		int nLibros=0;
 
 		vector<Usuario*>listaUsuarios; //composicion
 		vector<Libro*>listaLibros;
@@ -32,15 +35,17 @@ class Estanteria
 	void mostrarDatos();
 	void mostrarDatosProfe();
 	void mostrarDatosAlum();
+	void agregarRevista(Revista*);
+	void agregarLibro(Libro*);
 	//int cantidadlibros(Estanteria*);
 	void asignarProfesor(Profesor*);
 	void asignarAlumno(Alumno*);
-	char* getEstanteria();
+	char* getEstanteria();//para alumno o profesor
 
-	void crearLibro(string ,string ,string ,string ,string,string,string,string);
-	void crearRevista(string ,string ,string ,string ,string,string,string,string,int);
-	void agregarAlumno(string,string,string,int);
-	void agregarProfesor(string,string,string,int);
+	//void crearLibro(string ,string ,string ,string ,string,string,string,string);
+	//void crearRevista(string ,string ,string ,string ,string,string,string,string,int);
+	//void agregarAlumno(string,string,string,int);
+	//void agregarProfesor(string,string,string,int);
 
 };
 

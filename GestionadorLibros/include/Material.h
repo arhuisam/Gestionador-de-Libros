@@ -15,8 +15,7 @@ class Material
 		string Autor;
 		string Categoria;
 		string Editorial;
-		Profesor *profesor;
-		Alumno*alumno;
+
 
 	public:
 		//Material(string ,string ,string ,string ,Profesor * ,Alumno *);

@@ -12,19 +12,20 @@
 	"Revista.h"
 	<iomanip>
 
-1614572942 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\libro.cpp
+1614665229 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\libro.cpp
 	"Libro.h"
 	<iostream>
 	<string>
 	<iomanip>
 
-1614572893 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\libro.h
+1614665340 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\libro.h
 	<string>
 	<iostream>
 	<vector>
 	"Material.h"
+	"Estanteria.h"
 
-1614572761 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\material.h
+1614664113 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\material.h
 	<string>
 	<iostream>
 	<vector>
@@ -35,16 +36,17 @@
 	<iostream>
 	<sstream>
 
-1614656818 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\revista.cpp
+1614664003 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\revista.cpp
 	"Revista.h"
 	<iostream>
 	<string>
 	<iomanip>
 
-1614573338 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\revista.h
+1614663990 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\revista.h
 	<string>
 	<vector>
 	"Material.h"
+	"Estanteria.h"
 
 1614660908 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\alumno.cpp
 	"Alumno.h"
@@ -61,7 +63,7 @@
 	<iostream>
 	<vector>
 
-1614653555 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\estanteria.cpp
+1614665435 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\estanteria.cpp
 	"Estanteria.h"
 	"Usuario.h"
 	"Alumno.h"
@@ -69,8 +71,9 @@
 	"Material.h"
 	"Revista.h"
 	"Libro.h"
+	<iomanip>
 
-1614653234 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\estanteria.h
+1614664867 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\estanteria.h
 	<string>
 	<iostream>
 	<vector>

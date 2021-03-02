@@ -9,13 +9,14 @@
 #include "Usuario.h"
 #include "Revista.h"
 #include <iomanip>
+#include<fstream>
 
 using namespace std;
 
 int main()
 {
     Estanteria estanteria;
-    int x=0, y=0, z, s, v, w,ind=0, nProf=0, nAlum=0,nLibros=0,nRevistas=0,nEstanteria=0,aux=0;
+    int x=0, y=0, z, s, v, w, u, p, ind=0, nProf=0, nAlum=0,nLibros=0,nRevistas=0,nEstanteria=0,aux=0;
     string cod,nombres;
     Profesor listaProfesor[20];
     Alumno listaAlumno[20];
@@ -30,7 +31,7 @@ int main()
     cout<<"3. Crear estanteria"<<endl;
     cout<<"4. Modificar datos"<<endl;
     cout<<"5. Mostrar Lista "<<endl;
-    cout<<"6. Imprimir datos"<<endl; //colocarlos en txts
+    cout<<"6. Imprimir datos"<<endl;
     cout<<"7. Finalizar"<<endl;
     cin>>x;
     switch(x)
@@ -84,14 +85,37 @@ int main()
         cin>>y;
         switch(y)
         {
-            case 1:         
+            case 1:
+                if(nEstanteria!=0){  
                 listaRevista[nRevistas].registrarRevista();
+                cout<<left;
+                cout<<(3)<<'#';
+                cout<<(10)<<"Nombre";
+                cout<<endl;
+                for(int i=0;i<nEstanteria;i++){
+                    cout<<left<<setw(3)<<i+1;
+                    listaEstanteria[i].mostrarDatos();
+                    cout<<endl;
+                }
+                    cout<<endl;
+                do{
+                    cout<<"Ingrese numero (#) :";cin>>ind;
+                    if(nRevistas or 0==ind){
+                        cout<<"La estanteria que intenta asignar no existe "<<endl;
+                    }else{
+                        cout<<endl;cout<<"Asignado correctamente"<<endl;
+                    }
+                }while(nRevistas<ind or 0==ind);
+                listaRevista[nRevistas].asignarEstanteria(&listaEstanteria[ind-1]);
+                listaEstanteria[ind-1].agregarRevista(&listaRevista[nRevistas]);
                 nRevistas++;
+              
                 cout<<"Registro exitoso!"<<endl;
                 system("PAUSE");
 				system("CLS");
             break;
             case 2:
+            /// faltaaa declararr
                 listaLibro[nLibros].registrarLibro();
                 nLibros++;
                 cout<<"Registro exitoso!"<<endl;
@@ -617,7 +641,127 @@ int main()
     
 
     case 6:
+    	do
+        {
+            cout<<"Cuales tipos de datos desea imprimir?"<<endl;
+            cout<<"1. Usuario"<<endl;
+            cout<<"2. Material"<<endl;
+            cout<<"3. Estanteria"<<endl;
+            cout<<"4. Retroceder"<<endl;
+            cin>>u;
+            switch(u)
+            {
+                case 1:
+                    do
+                    {
+                        cout<<"Cual tipo de usuario desea mostrar?"<<endl;
+                        cout<<"1. Profesor"<<endl;
+                        cout<<"2. Alumno"<<endl;
+                        cout<<"3. Retroceder"<<endl;
+                        cin>>p;
+                        switch(p)
+                        {
+                            case 1:
+                                ofstream archivo;
+	                            archivo.open("Profesores.txt", ios::out);
+                                for(int i = 0; i <  nProf; i++)
+                                {
+                                    archivo<<listaProfesor[i].mostrarDatos()<<endl;
+                                }
+                                archivo.close();
+                                cout<<"Impresion exitosa!"<<endl;
+                                system("PAUSE");
+				                system("CLS");
+                            break;
+                            case 2:
+                                ofstream archivo;
+	                            archivo.open("Alumnos.txt", ios::out);
+                                for(int i = 0; i <  nAlum; i++)
+                                {
+                                    archivo<<listaAlumno[i].mostrarDatos()<<endl;
+                                }
+                                archivo.close();
+                                cout<<"Impresion exitosa!"<<endl;
+                                system("PAUSE");
+				                system("CLS");
+                            break:
+                            case 3:
+                                cout<<"Retrocediendo..."<<endl;
+                                system("PAUSE");
+				                system("CLS");
+                            break;
+                            default:
+                                cout<<"DESICION INVALIDA"<<endl;
+                                system("PAUSE");
+				                system("CLS");
+                            break;
+                        }
+                    } while (p!=3);
+                break;
+                case 2:
+                    do
+                    {
+                        cout<<"Cual tipo de material desea mostrar?"<<endl;
+                        cout<<"1. Libro"<<endl;
+                        cout<<"2. Revista"<<endl;
+                        cout<<"3. Retroceder"<<endl;
+                        cin>>p;
+                        switch(p)
+                        {
+                            case 1:
+                                ofstream archivo;
+	                            archivo.open("Libros.txt", ios::out);
+                                for(int i = 0; i <  nLibros; i++)
+                                {
+                                    archivo<<listaLibros[i].mostrarDatos()<<endl;
+                                }
+                                archivo.close();
+                                cout<<"Impresion exitosa!"<<endl;
+                                system("PAUSE");
+				                system("CLS");
+                            break;
+                            case 2:
+                                ofstream archivo;
+	                            archivo.open("Revista.txt", ios::out);
+                                for(int i = 0; i <  nRevistas; i++)
+                                {
+                                    archivo<<listaRevista[i].mostrarDatos()<<endl;
+                                }
+                                archivo.close();
+                                cout<<"Impresion exitosa!"<<endl;
+                                system("PAUSE");
+				                system("CLS");
+                            break;
+                            case 3:
+                                cout<<"Retrocediendo..."<<endl;
+                                system("PAUSE");
+				                system("CLS");
+                            break;
+                            default:
+                                cout<<"DESICION INVALIDA"<<endl;
+                                system("PAUSE");
+				                system("CLS");
+                            break;
+                        }
+                    } while (p!=3);
+                    
+                    
+                break;
+                case 3:
 
+                break;
+                case 4:
+                    cout<<"Retrocediendo..."<<endl;
+                    system("PAUSE");
+			    	system("CLS");
+                break;
+                default:
+                    cout<<"DESICION INVALIDA"<<endl;
+                    system("PAUSE");
+			    	system("CLS");
+                break;
+            }
+        } while (u!=4);    
     break;
     case 7:
         cout<<"Finalizando...";
