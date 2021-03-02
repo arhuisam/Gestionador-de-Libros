@@ -67,8 +67,8 @@ int main()
         do
         {
         cout<<"Que tipo de material desea ingresar?"<<endl;
-        cout<<"1. Libro"<<endl;
-        cout<<"2. Revista"<<endl;
+        cout<<"1. Revista"<<endl;
+        cout<<"2. Libro"<<endl;
         cout<<"3. Retroseder"<<endl;
         cin>>y;
         switch(y)

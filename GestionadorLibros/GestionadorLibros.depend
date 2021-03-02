@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1614652810 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\main.cpp
+1614655350 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\main.cpp
 	<iostream>
 	"Profesor.h"
 	"Estanteria.h"
@@ -46,7 +46,7 @@
 	<vector>
 	"Material.h"
 
-1614652985 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\alumno.cpp
+1614653789 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\alumno.cpp
 	"Alumno.h"
 	<iomanip>
 	<string>
