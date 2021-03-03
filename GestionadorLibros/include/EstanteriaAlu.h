@@ -37,7 +37,7 @@ class EstanteriaAlu
 	void mostrarDatos();
 	void mostrarDatosUsuario();
 	void mostrarDatosProfe();
-	void mostrarDatosAlum();
+	void mostrarDatosAlu();
 	void agregarRevista(Revista*);
 	void agregarLibro(Libro*);
 	//int cantidadlibros(Estanteria*);

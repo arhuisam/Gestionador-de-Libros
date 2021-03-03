@@ -54,13 +54,13 @@
 	"Material.h"
 	"Estanteria.h"
 
-1614750805 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\alumno.cpp
+1614753048 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\alumno.cpp
 	"Alumno.h"
 	<iomanip>
 	<fstream>
 	<string.h>
 
-1614747168 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\alumno.h
+1614753096 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\alumno.h
 	"Usuario.h"
 	<string>
 	<vector>
@@ -106,6 +106,24 @@
 	<string.h>
 
 1614751371 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\estanteriaalum.h
+	<string>
+	<iostream>
+	<vector>
+	<Alumno.h>
+	<Profesor.h>
+	<fstream>
+
+1614753749 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\estanteriaalu.cpp
+	"EstanteriaAlu.h"
+	"Usuario.h"
+	"Alumno.h"
+	"Profesor.h"
+	"Material.h"
+	"Revista.h"
+	"Libro.h"
+	<iomanip>
+
+1614753748 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\estanteriaalu.h
 	<string>
 	<iostream>
 	<vector>

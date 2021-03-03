@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Profesor.h"
 #include "Estanteria.h"
-#include "EstanteriaAlum.h"
+#include "EstanteriaAlu.h"
 #include "Libro.h"
 #include "Alumno.h"
 #include "Profesor.h"
@@ -20,14 +20,14 @@ int main()
 {
     ofstream archivo;
     Estanteria estanteria;
-    int x=0, y=0, z, s, v, w, u, p, ind=0, nProf=0, nAlum=0,nLibros=0,nRevistas=0,nEstanteria=0,aux=0,nEstanteriaalum=0;
+    int x=0, y=0, z, s, v, w, u, p, ind=0, nProf=0, nAlum=0,nLibros=0,nRevistas=0,nEstanteria=0,aux=0,nEstanteriaalu=0;
     string cod,nombres;
     Profesor listaProfesor[20];
     Alumno listaAlumno[20];
     Revista listaRevista[20];
     Libro listaLibro[20];
     Estanteria listaEstanteria[20];
-    EstanteriaAlum listaEstanteriaalum[20];
+    EstanteriaAlu listaEstanteriaalu[20];
     do{
     cout<<"Que accion desea realizar:"<<endl;
     cout<<"1. Registrar usuario"<<endl;//cUMPLE
@@ -86,7 +86,7 @@ int main()
         cin>>y;
         switch(y){
             case 1:
-                if(nEstanteria!=0){  
+                if(nEstanteria!=0){
                 listaRevista[nRevistas].registrarRevista();
                 cout<<left;
                 cout<<setw(3)<<'#';
@@ -115,11 +115,11 @@ int main()
                     cout<<"No existen estanterias para poder realizar esta accion!"<<endl;
                 }
                 system("PAUSE");
-				system("CLS");      
+				system("CLS");
             break;
             case 2:
             /// faltaaa declararr//errrrrrrrrror coregir
-            if(nEstanteria!=0){  
+            if(nEstanteria!=0){
                 listaLibro[nLibros].registrarLibro();
                 cout<<left;
                 cout<<setw(3)<<'#';
@@ -165,11 +165,12 @@ int main()
     break;
     case 3:
             system("CLS");
-            listaEstanteria[nEstanteria].registrar();
+            
             cout<<"Que tipo de usuario desea asignarle "<<endl;
             cout<<"(Profesor =1/Alumno =2) :"<<endl;
             cin>>aux;
             if(aux==1){
+                listaEstanteria[nEstanteria].registrar();
                 if(nProf!=0){
                     cout<<setw(3)<<"#";
                     cout<<setw(10)<<"Nombre";
@@ -204,8 +205,9 @@ int main()
                 cout<<"No hay profesores registrado";
                 system("PAUSE");
 				system("CLS");
-                }                   
+                }
             }else if(aux==2){ ////CAMVIAR
+                listaEstanteriaalu[nEstanteriaalu].registrar();
                 if(nAlum!=0){
                     cout<<left;
                     cout<<setw(3)<<"#";
@@ -231,17 +233,17 @@ int main()
 				            system("CLS");
                         }
                     }while(nAlum<ind or 0==ind);
-                    listaEstanteriaalum[nEstanteriaalum].asignarAlumno(&listaAlumno[ind-1]);
-                    listaAlumno[ind-1].agregarEstanteriaAlum(&listaEstanteriaalum[nEstanteriaalum]);
+                    listaEstanteriaalu[nEstanteriaalu].asignarAlumno(&listaAlumno[ind-1]);
+                    listaAlumno[ind-1].agregarEstanteriaAlu(&listaEstanteriaalu[nEstanteriaalu]);
                     cout<<"Registro exitoso"<<endl;
-                    nEstanteriaalum++;
+                    nEstanteriaalu++;
                     system("PAUSE");
 				    system("CLS");
                 }else{
                     cout<<"No hay Alumno registrado";
                     system("PAUSE");
 				    system("CLS");
-                }     
+                }
             }else{
                 cout<<"DESICION INVALIDA";
                 system("PAUSE");
@@ -420,7 +422,7 @@ int main()
 			system("CLS");
         break;
         }
-        } while (w!=4);    
+        } while (w!=4);
     break;
     case 5:
     do
@@ -515,7 +517,7 @@ int main()
                             for(int i = 0; i < nLibros; i++){
                                 cout<<left<<setw(3)<<i+1;
                                 listaLibro[i].mostrarDatos();
-                                cout<<endl;   
+                                cout<<endl;
                             }
                             cout<<endl;
                             system("PAUSE");
@@ -541,8 +543,8 @@ int main()
                             for(int i = 0; i < nRevistas; i++){
                                 cout<<left<<setw(3)<<i+1;
                                 listaRevista[i].mostrarDatos();
-                                cout<<endl;   
-                            }   
+                                cout<<endl;
+                            }
                             cout<<endl;
                             system("PAUSE");
 				            system("CLS");
@@ -578,7 +580,7 @@ int main()
                         for(int i = 0; i < nEstanteria; i++){
                             cout<<left<<setw(3)<<i+1;
                             listaEstanteria[i].mostrarDatosProfe();//////
-                            cout<<endl;   
+                            cout<<endl;
                         }
                     cout<<endl;
                     system("PAUSE");
@@ -589,15 +591,15 @@ int main()
 				system("CLS");
                 }
             }else if(aux==2){//////////////////////////////
-                    if(nEstanteriaalum!=0){
+                    if(nEstanteriaalu!=0){
                     cout<<setw(3)<<"#";
                     cout<<setw(10)<<"Nombre";
                     cout<<setw(10)<<"Nombre Usuario";
                     cout<<endl;
-                        for(int i = 0; i < nEstanteria; i++){
+                        for(int i = 0; i < nEstanteriaalu; i++){
                             cout<<left<<setw(3)<<i+1;
-                            listaEstanteriaalum[i].mostrarDatosAlum();///
-                            cout<<endl;   
+                            listaEstanteriaalu[i].mostrarDatosAlu();///
+                            cout<<endl;
                         }
                     cout<<endl;
                     system("PAUSE");
@@ -610,6 +612,7 @@ int main()
             }else{
                 cout<<"Opcion invalida "<<endl;
             }
+            
             break;
             case 4:
                 cout<<"Retrocediendo..."<<endl;
@@ -623,7 +626,7 @@ int main()
             break;
         }
     } while (v!=4);
-    
+
     case 6:
         do{
             cout<<"Cuales tipos de datos desea imprimir?"<<endl;
@@ -646,7 +649,7 @@ int main()
                             case 1:
                                 for(int i = 0; i <  nProf; i++)
                                 {
-                                    
+
                                 }
                                 //archivo.close();
                                 cout<<"Impresion exitosa!"<<endl;
@@ -722,8 +725,8 @@ int main()
                             break;
                         }
                     } while (p!=3);
-                    
-                    
+
+
                 break;
                 case 3:
 
@@ -739,15 +742,15 @@ int main()
 			    	system("CLS");
                 break;
             }
-        } while (u!=4);    
+        } while (u!=4);
     break;
     case 7:
         cout<<"Finalizando...";
-        
+
     break;
     }               //primer switch (x)
     }while(x!=7);  //primer do while
-    
-   return 0; 
+
+   return 0;
 
   } //main

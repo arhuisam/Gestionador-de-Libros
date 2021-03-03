@@ -29,12 +29,12 @@ void Alumno::registrar(){
 void Alumno::modificar(){
     Alumno::registrar();
 }
-void Alumno :: agregarEstanteriaAlum(EstanteriaAlum *E){
-    estanteriaalum[nEstanteriaalum]=E;
-    nEstanteriaalum = nEstanteriaalum+1;
+void Alumno :: agregarEstanteriaAlu(EstanteriaAlu *E){
+    estanteriaalu[nEstanteriaalu]=E;
+    nEstanteriaalu = nEstanteriaalu+1;
 }
 char* Alumno :: getAlumno(){
-    
+
     return nombres;
 }
 void Alumno :: imprimirAlumno(){

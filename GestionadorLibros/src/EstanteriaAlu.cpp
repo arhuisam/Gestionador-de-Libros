@@ -39,7 +39,8 @@ void EstanteriaAlu :: mostrarDatos(){
     cout<<profesor -> getProfesor();
 }*/
 //capturar el alumno
-void EstanteriaAlu :: mostrarDatosAlum(){
+void EstanteriaAlu :: mostrarDatosAlu(){
     EstanteriaAlu ::mostrarDatos();
     cout<<alumno->getAlumno();
 }
+
