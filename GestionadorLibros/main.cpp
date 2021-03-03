@@ -98,12 +98,12 @@ int main()
                     cout<<endl;
                 do{
                     cout<<"Ingrese numero (#) :";cin>>ind;
-                    if(nRevistas or 0==ind){
+                    if(nEstanteria<ind or 0==ind){
                         cout<<"La estanteria que intenta asignar no existe "<<endl;
                     }else{
                         cout<<endl;cout<<"Asignado correctamente"<<endl;
                     }
-                }while(nRevistas<ind or 0==ind);
+                }while(nEstanteria<ind or 0==ind);
                     listaRevista[nRevistas].asignarEstanteria(&listaEstanteria[ind-1]);
                     listaEstanteria[ind-1].agregarRevista(&listaRevista[nRevistas]);
                     nRevistas++;
@@ -131,12 +131,12 @@ int main()
                     cout<<endl;
                 do{
                     cout<<"Ingrese numero (#) :";cin>>ind;//corregir
-                    if(nLibros or 0==ind){
+                    if(nEstanteria or 0==ind){
                         cout<<"La estanteria que intenta asignar no existe "<<endl;
                     }else{
                         cout<<endl;cout<<"Asignado correctamente"<<endl;
                     }
-                }while(nLibros<ind or 0==ind);
+                }while(nEstanteria<ind or 0==ind);
                 listaLibro[nLibros].asignarEstanteria(&listaEstanteria[ind-1]);
                 listaEstanteria[ind-1].agregarLibro(&listaLibro[nLibros]);
                 nLibros++;
