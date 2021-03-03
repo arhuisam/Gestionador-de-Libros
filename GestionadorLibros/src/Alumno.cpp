@@ -41,3 +41,5 @@ void Alumno :: imprimirAlumno(){
     ofstream archivo;
     archivo.open("Alumnos.txt",ios :: trunc | ios :: app);
     archivo<<nombres<<" "<<apellidos<<" "<<DNI<<" "<<Cod_Alu<<endl;
+    archivo.close();
+}

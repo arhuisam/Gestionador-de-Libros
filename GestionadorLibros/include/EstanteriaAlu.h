@@ -1,5 +1,7 @@
-#ifndef ESTANTERIAALUM_H
-#define ESTANTERIAALUM_H
+#ifndef ESTANTERIAALU_H
+#define ESTANTERIAALU_H
+
+
 
 #include <string>
 #include <iostream>
@@ -16,14 +18,14 @@ class Libro;
 
 
 
-class EstanteriaAlum
+class EstanteriaAlu
 
 {
 	protected:
 		char Nombre[20];
 		Profesor* profesor=NULL;//para q se asigne a alumns
 		Alumno *alumno=NULL;//para  q se asigne a profes
-		
+
 		Revista*revista[20];
 		Libro* libro[20];
 		int nRevistas=0;
@@ -40,7 +42,7 @@ class EstanteriaAlum
 	void agregarLibro(Libro*);
 	//int cantidadlibros(Estanteria*);
 	void asignarAlumno(Alumno*);
-	
+
 
 	char* getEstanteria(); //para mostrar los materiales a q estanteria pertenece
 

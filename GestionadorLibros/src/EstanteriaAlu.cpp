@@ -1,4 +1,4 @@
-#include "EstanteriaAlum.h"
+#include "EstanteriaAlu.h"
 #include "Usuario.h"
 #include "Alumno.h"
 #include "Profesor.h"
@@ -18,19 +18,19 @@ using namespace std;
 /*void Estanteria :: relacionarRevista(string titulo,string autor,string categoria,string editorial,string cod_prof,string cod_alu,string anio,string volumen,int numero) {
 
 }*/
-void EstanteriaAlum :: registrar(){
+void EstanteriaAlu :: registrar(){
     cout<<"Ingrese nombre de la estanteria: "<<endl;
     cin>>Nombre;
 }
 
-void EstanteriaAlum :: asignarAlumno(Alumno* alum){
+void EstanteriaAlu :: asignarAlumno(Alumno* alum){
         alumno =alum;
 }
 
-char* EstanteriaAlum :: getEstanteria(){
+char* EstanteriaAlu :: getEstanteria(){
     return Nombre;
 }
-void EstanteriaAlum :: mostrarDatos(){
+void EstanteriaAlu :: mostrarDatos(){
     cout<<setw(10)<<Nombre;
 }
 //captura el profesor
@@ -39,7 +39,7 @@ void EstanteriaAlum :: mostrarDatos(){
     cout<<profesor -> getProfesor();
 }*/
 //capturar el alumno
-void EstanteriaAlum :: mostrarDatosAlum(){
-    EstanteriaAlum ::mostrarDatos();
+void EstanteriaAlu :: mostrarDatosAlum(){
+    EstanteriaAlu ::mostrarDatos();
     cout<<alumno->getAlumno();
 }

@@ -22,7 +22,6 @@ void Estanteria :: registrar(){
     cout<<"Ingrese nombre de la estanteria: "<<endl;
     cin>>Nombre;
 }
-
 void Estanteria :: asignarProfesor(Profesor *profe){
         profesor =profe;
 }
@@ -43,10 +42,10 @@ void Estanteria ::mostrarDatosProfe(){
     cout<<profesor -> getProfesor();
 }
 //capturar el alumno
-void Estanteria :: mostrarDatosAlum(){
+/*void Estanteria :: mostrarDatosAlum(){
     Estanteria ::mostrarDatos();
     cout<<alumno->getAlumno();
-}
+}*/
 
 void Estanteria ::agregarRevista(Revista *revi){
     revista[nRevistas] = revi;

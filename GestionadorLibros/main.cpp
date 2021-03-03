@@ -20,7 +20,7 @@ int main()
 {
     ofstream archivo;
     Estanteria estanteria;
-    int x=0, y=0, z, s, v, w, u, p, ind=0, nProf=0, nAlum=0,nLibros=0,nRevistas=0,nEstanteria=0,aux=0,nEstanteriaalum;
+    int x=0, y=0, z, s, v, w, u, p, ind=0, nProf=0, nAlum=0,nLibros=0,nRevistas=0,nEstanteria=0,aux=0,nEstanteriaalum=0;
     string cod,nombres;
     Profesor listaProfesor[20];
     Alumno listaAlumno[20];
@@ -589,14 +589,14 @@ int main()
 				system("CLS");
                 }
             }else if(aux==2){//////////////////////////////
-                    if(nEstanteria!=0){
+                    if(nEstanteriaalum!=0){
                     cout<<setw(3)<<"#";
                     cout<<setw(10)<<"Nombre";
                     cout<<setw(10)<<"Nombre Usuario";
                     cout<<endl;
                         for(int i = 0; i < nEstanteria; i++){
                             cout<<left<<setw(3)<<i+1;
-                            listaEstanteria[i].mostrarDatosAlum();///
+                            listaEstanteriaalum[i].mostrarDatosAlum();///
                             cout<<endl;   
                         }
                     cout<<endl;

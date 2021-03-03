@@ -22,8 +22,7 @@ class Estanteria
 	protected:
 		char Nombre[20];
 		Profesor* profesor=NULL;//para q se asigne a alumns
-		Alumno *alumno=NULL;//para  q se asigne a profes
-		
+		//Alumno *alumno=NULL;//para  q se asigne a profes
 		Revista*revista[20];
 		Libro* libro[20];
 		int nRevistas=0;
