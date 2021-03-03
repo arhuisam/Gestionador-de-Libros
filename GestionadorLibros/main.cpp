@@ -118,14 +118,36 @@ int main()
             break;
             case 2:
             /// faltaaa declararr
-
-
-
+            if(nEstanteria!=0){  
                 listaLibro[nLibros].registrarLibro();
+                cout<<left;
+                cout<<(3)<<'#';
+                cout<<(10)<<"Nombre";
+                cout<<endl;
+                for(int i=0;i<nEstanteria;i++){
+                    cout<<left<<setw(3)<<i+1;
+                    listaEstanteria[i].mostrarDatos();
+                    cout<<endl;
+                }
+                    cout<<endl;
+                do{
+                    cout<<"Ingrese numero (#) :";cin>>ind;
+                    if(nLibros or 0==ind){
+                        cout<<"La estanteria que intenta asignar no existe "<<endl;
+                    }else{
+                        cout<<endl;cout<<"Asignado correctamente"<<endl;
+                    }
+                }while(nLibros<ind or 0==ind);
+                listaLibro[nLibros].asignarEstanteria(&listaEstanteria[ind-1]);
+                listaEstanteria[ind-1].agregarLibro(&listaLibro[nLibros]);
                 nLibros++;
+              
                 cout<<"Registro exitoso!"<<endl;
                 system("PAUSE");
-			    system("CLS");
+				system("CLS");
+
+
+
             break;
             case 3:
                 cout<<"Retrosediendo..."<<endl;
@@ -140,6 +162,7 @@ int main()
         }
         } while (y!=3);
     break;
+        }
     case 3:
             system("CLS");
             listaEstanteria[nEstanteria].registrar();
@@ -671,7 +694,7 @@ int main()
 	                            archivo.open("Profesores.txt", ios::out);
                                 for(int i = 0; i <  nProf; i++)
                                 {
-                                    archivo << listaProfesor[i].mostrarDatos()<<endl;
+                                    archivo<<listaProfesor[i].mostrarDatos()<<endl;
                                 }
                                 archivo.close();
                                 cout<<"Impresion exitosa!"<<endl;
@@ -769,7 +792,9 @@ int main()
         cout<<"Finalizando...";
     break;
     }
-    }while(x!=7); //switch
+    }
     
+
+  }while(x!=7); //switch
     return 0;
 }

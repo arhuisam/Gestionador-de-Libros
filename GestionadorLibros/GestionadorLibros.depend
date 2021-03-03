@@ -53,7 +53,7 @@
 	<iomanip>
 	<string>
 
-1614660872 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\alumno.h
+1614666093 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\alumno.h
 	"Usuario.h"
 	<string>
 	<vector>
@@ -63,7 +63,7 @@
 	<iostream>
 	<vector>
 
-1614665435 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\estanteria.cpp
+1614666773 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\estanteria.cpp
 	"Estanteria.h"
 	"Usuario.h"
 	"Alumno.h"
@@ -73,7 +73,7 @@
 	"Libro.h"
 	<iomanip>
 
-1614664867 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\estanteria.h
+1614666210 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\estanteria.h
 	<string>
 	<iostream>
 	<vector>
