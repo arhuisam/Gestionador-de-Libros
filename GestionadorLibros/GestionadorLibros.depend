@@ -1,8 +1,9 @@
 # depslib dependency file v1.0
-1614737735 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\main.cpp
+1614747825 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\main.cpp
 	<iostream>
 	"Profesor.h"
 	"Estanteria.h"
+	"EstanteriaAlum.h"
 	"Libro.h"
 	"Alumno.h"
 	"Profesor.h"
@@ -53,13 +54,13 @@
 	"Material.h"
 	"Estanteria.h"
 
-1614737735 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\alumno.cpp
+1614749198 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\alumno.cpp
 	"Alumno.h"
 	<iomanip>
 	<fstream>
-	<string>
+	<string.h>
 
-1614733747 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\alumno.h
+1614747168 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\alumno.h
 	"Usuario.h"
 	<string>
 	<vector>
@@ -70,7 +71,7 @@
 	<iostream>
 	<vector>
 
-1614740333 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\estanteria.cpp
+1614749344 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\estanteria.cpp
 	"Estanteria.h"
 	"Usuario.h"
 	"Alumno.h"
@@ -80,7 +81,7 @@
 	"Libro.h"
 	<iomanip>
 
-1614740330 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\estanteria.h
+1614748562 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\estanteria.h
 	<string>
 	<iostream>
 	<vector>
@@ -94,13 +95,21 @@
 	"Usuario.h"
 	<fstream>
 
-1614740125 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\profesor.cpp
+1614746373 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\profesor.cpp
 	"Profesor.h"
 	<string.h>
 	<fstream>
 	<iomanip>
 
-1614739412 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\usuario.cpp
+1614745820 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\usuario.cpp
 	"Usuario.h"
 	<string.h>
+
+1614748945 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\estanteriaalum.h
+	<string>
+	<iostream>
+	<vector>
+	<Alumno.h>
+	<Profesor.h>
+	<fstream>
 

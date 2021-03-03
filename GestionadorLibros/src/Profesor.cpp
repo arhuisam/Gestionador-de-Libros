@@ -38,5 +38,8 @@ char* Profesor :: getProfesor(){
     return nombres;
 }
 void Profesor :: imprimirProfesor(){
-
+    ofstream archivo;
+    archivo.open("Profesores.txt",ios :: trunc | ios :: app);
+    archivo<<nombres<<" "<<apellidos<<" "<<DNI<<" "<<Cod_prof<<endl;
+    archivo.close();
 }

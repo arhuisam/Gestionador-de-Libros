@@ -6,13 +6,16 @@
 #include <vector>
 #include <fstream>
 using namespace std;
-class Estanteria;
+
+class EstanteriaAlum;
 class Alumno:public Usuario
 {
 	protected:
 		int Cod_Alu;
-		int nEstanteria=0;
-		Estanteria* estanteria[20];
+		//int nEstanteria=0;
+		int nEstanteriaalum=0;
+		//Estanteria* estanteria[20];
+		EstanteriaAlum* estanteriaalum[20];
 		
 		//vector<Material*>listaMaterial;
 	public:
@@ -22,7 +25,7 @@ class Alumno:public Usuario
 		void mostrarDatos();
 		void registrar();
 		void modificar();
-		void agregarEstanteria(Estanteria*);
+		void agregarEstanteriaAlum(EstanteriaAlum*);
 		char* getAlumno(); //para q muestre cuando llamemos a mostrar estanteria
 		void imprimirAlumno();
 };

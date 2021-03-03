@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Profesor.h"
 #include "Estanteria.h"
+#include "EstanteriaAlum.h"
 #include "Libro.h"
 #include "Alumno.h"
 #include "Profesor.h"
@@ -19,18 +20,19 @@ int main()
 {
     ofstream archivo;
     Estanteria estanteria;
-    int x=0, y=0, z, s, v, w, u, p, ind=0, nProf=0, nAlum=0,nLibros=0,nRevistas=0,nEstanteria=0,aux=0;
+    int x=0, y=0, z, s, v, w, u, p, ind=0, nProf=0, nAlum=0,nLibros=0,nRevistas=0,nEstanteria=0,aux=0,nEstanteriaalum;
     string cod,nombres;
     Profesor listaProfesor[20];
     Alumno listaAlumno[20];
     Revista listaRevista[20];
     Libro listaLibro[20];
     Estanteria listaEstanteria[20];
+    EstanteriaAlum listaEstanteriaalum[20];
     do{
     cout<<"Que accion desea realizar:"<<endl;
-    cout<<"1. Registrar usuario"<<endl;
-    cout<<"2. Ingresar material"<<endl;
-    cout<<"3. Crear estanteria"<<endl;
+    cout<<"1. Registrar usuario"<<endl;//cUMPLE
+    cout<<"2. Ingresar material"<<endl;//CUMPLE
+    cout<<"3. Crear estanteria"<<endl;//CUMPLE
     cout<<"4. Modificar datos"<<endl;
     cout<<"5. Mostrar Lista "<<endl;
     cout<<"6. Imprimir datos"<<endl;
@@ -204,7 +206,7 @@ int main()
 				system("CLS");
                 }                   
             }else if(aux==2){ ////CAMVIAR
-                if(nProf!=0){
+                if(nAlum!=0){
                     cout<<left;
                     cout<<setw(3)<<"#";
                     cout<<setw(10)<<"Nombre";
@@ -219,7 +221,7 @@ int main()
                         }
                     do{
                         cout<<"Ingrese numero (#) :";cin>>ind;
-                        if(nProf<ind or 0==ind){
+                        if(nAlum<ind or 0==ind){
                             cout<<"El alumno que intenta asignar no existe "<<endl;
                             system("PAUSE");
 				            system("CLS");
@@ -229,10 +231,10 @@ int main()
 				            system("CLS");
                         }
                     }while(nAlum<ind or 0==ind);
-                    listaEstanteria[nEstanteria].asignarAlumno(&listaAlumno[ind-1]);
-                    listaAlumno[ind-1].agregarEstanteria(&listaEstanteria[nEstanteria]);
+                    listaEstanteriaalum[nEstanteriaalum].asignarAlumno(&listaAlumno[ind-1]);
+                    listaAlumno[ind-1].agregarEstanteriaAlum(&listaEstanteriaalum[nEstanteriaalum]);
                     cout<<"Registro exitoso"<<endl;
-                    nEstanteria++;
+                    nEstanteriaalum++;
                     system("PAUSE");
 				    system("CLS");
                 }else{
@@ -567,7 +569,7 @@ int main()
             cout<<"Para que tipo de usuario desea ver la estanteria "<<endl;
             cout<<"(Profesor =1/Alumno =2) :"<<endl;
             cin>>aux;
-            if(aux==1){
+            if(aux==1){//////////////////////////
                 if(nEstanteria!=0){
                     cout<<setw(3)<<"#";
                     cout<<setw(10)<<"Nombre";
@@ -575,7 +577,7 @@ int main()
                     cout<<endl;
                         for(int i = 0; i < nEstanteria; i++){
                             cout<<left<<setw(3)<<i+1;
-                            listaEstanteria[i].mostrarDatosProfe();
+                            listaEstanteria[i].mostrarDatosProfe();//////
                             cout<<endl;   
                         }
                     cout<<endl;
@@ -586,7 +588,7 @@ int main()
                 system("PAUSE");
 				system("CLS");
                 }
-            }else if(aux==2){
+            }else if(aux==2){//////////////////////////////
                     if(nEstanteria!=0){
                     cout<<setw(3)<<"#";
                     cout<<setw(10)<<"Nombre";
@@ -594,7 +596,7 @@ int main()
                     cout<<endl;
                         for(int i = 0; i < nEstanteria; i++){
                             cout<<left<<setw(3)<<i+1;
-                            listaEstanteria[i].mostrarDatosAlum();
+                            listaEstanteria[i].mostrarDatosAlum();///
                             cout<<endl;   
                         }
                     cout<<endl;
@@ -652,6 +654,9 @@ int main()
 				                system("CLS");
                             break;
                             case 2:
+                                //archivo.open("Alumnos.txt",ios :: trunc | ios :: app);
+                                //archivo<<"Nombres   Apellidos   DNI   Cod_Alu "<<endl;
+                                //archivo.close();
                                 for(int i = 0; i < nAlum; i++)
                                 {
                                     listaAlumno[i].imprimirAlumno();
