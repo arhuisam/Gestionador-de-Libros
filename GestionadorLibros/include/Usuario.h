@@ -5,6 +5,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+class Estanteria;
 
 class Usuario
 {
@@ -12,6 +13,8 @@ class Usuario
 		char nombres[20];
 		string apellidos;
 		string DNI;
+		int nEstanteria=0;
+		Estanteria *estanteria[20];
 
 	public:
 		//Usuario(string,string,string);
@@ -21,6 +24,7 @@ class Usuario
 		void virtual mostrarDatos()=0;
 		void registrar();
 		void virtual modificar()=0;
+		char* getUsuario();
 };
 
 #endif

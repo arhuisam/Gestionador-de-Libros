@@ -28,6 +28,9 @@ void Estanteria :: asignarProfesor(Profesor *profe){
 void Estanteria :: asignarAlumno(Alumno* alum){
         alumno =alum;
 }
+void Estanteria :: asignarUsuario(Usuario* usu){
+    usuario=usu;
+}
 
 char* Estanteria :: getEstanteria(){
     return Nombre;
@@ -45,6 +48,10 @@ void Estanteria ::mostrarDatosProfe(){
 void Estanteria :: mostrarDatosAlum(){
     Estanteria ::mostrarDatos();
     cout<<alumno->getAlumno();
+}
+void Estanteria ::mostrarDatosUsuario(){
+    Estanteria ::mostrarDatos();
+    cout<<usuario->getUsuario();
 }
 void Estanteria ::agregarRevista(Revista *revi){
     revista[nRevistas] = revi;

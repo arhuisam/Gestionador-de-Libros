@@ -1,5 +1,6 @@
 #include "Profesor.h"
 #include <string.h>
+#include <fstream>
 #include <iomanip>
 using namespace std;
 
@@ -35,4 +36,7 @@ void Profesor :: agregarEstanteria(Estanteria *E){
 }
 char* Profesor :: getProfesor(){
     return nombres;
+}
+void Profesor :: imprimirProfesor(){
+
 }

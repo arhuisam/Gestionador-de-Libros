@@ -23,17 +23,17 @@ class Estanteria
 		char Nombre[20];
 		Profesor* profesor=NULL;//para q se asigne a alumns
 		Alumno *alumno=NULL;//para  q se asigne a profes
+		
 		Revista*revista[20];
 		Libro* libro[20];
 		int nRevistas=0;
 		int nLibros=0;
+		Usuario*usuario=NULL;
 
-		vector<Usuario*>listaUsuarios; //composicion
-		vector<Libro*>listaLibros;
-		vector<Revista*>listaRevistas;
 	public:
 	void registrar();
 	void mostrarDatos();
+	void mostrarDatosUsuario();
 	void mostrarDatosProfe();
 	void mostrarDatosAlum();
 	void agregarRevista(Revista*);
@@ -41,6 +41,7 @@ class Estanteria
 	//int cantidadlibros(Estanteria*);
 	void asignarProfesor(Profesor*);
 	void asignarAlumno(Alumno*);
+	void asignarUsuario(Usuario*);
 	char* getEstanteria(); //para mostrar los materiales a q estanteria pertenece
 
 	//void crearLibro(string ,string ,string ,string ,string,string,string,string);

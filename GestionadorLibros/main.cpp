@@ -272,6 +272,7 @@ int main()
                     cout<<setw(10)<<"Apellido";
                     cout<<setw(10)<<"DNI";
                     cout<<setw(10)<<"Codigo";
+                    cout<<endl;
                     for(int i = 0; i <  nProf; i++){
                         cout<<left<<setw(3)<<i+1;
                         listaProfesor[i].mostrarDatos();
@@ -641,10 +642,9 @@ int main()
                         switch(p)
                         {
                             case 1:
-	                            //archivo.open("Profesores.txt", ios::out);
                                 for(int i = 0; i <  nProf; i++)
                                 {
-                                    //archivo<<listaProfesor[i].mostrarDatos()<<endl;
+                                    
                                 }
                                 //archivo.close();
                                 cout<<"Impresion exitosa!"<<endl;
@@ -652,9 +652,6 @@ int main()
 				                system("CLS");
                             break;
                             case 2:
-                                archivo.open("Alumnos.txt", ios :: trunc);
-                                archivo<<" ";
-                                archivo.close();
                                 for(int i = 0; i < nAlum; i++)
                                 {
                                     listaAlumno[i].imprimirAlumno();
