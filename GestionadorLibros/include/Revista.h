@@ -3,8 +3,10 @@
 
 #include <string>
 #include <vector>
+#include <fstream>
 #include "Material.h"
 #include "Estanteria.h"
+
 class Revista :public Material
 {
 	protected:

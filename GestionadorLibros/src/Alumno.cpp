@@ -1,7 +1,8 @@
 #include "Alumno.h"
 #include <iomanip>
-
+#include <fstream>
 #include <string>
+
 using namespace std;
 
 /*Alumno::Alumno(string nombres,string apellidos,string DNI,int cod_alu ) : Usuario(nombres, apellidos, DNI)
@@ -37,5 +38,11 @@ void Alumno :: agregarEstanteria(Estanteria *E){
 }
 char* Alumno :: getAlumno(){
     return nombres;
+}
+void Alumno :: imprimirAlumno(){
+    ofstream archivo;
+    archivo.open("Alumnos.txt", ios :: app);
+    archivo<<nombres<<" "<<apellidos<<" "<<DNI<<" "<<Cod_Alu<<endl;
+    archivo.close();
 }
 

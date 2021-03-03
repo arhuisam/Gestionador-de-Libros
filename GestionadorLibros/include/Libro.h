@@ -6,6 +6,7 @@
 #include <vector>
 #include "Material.h"
 #include "Estanteria.h"
+#include <fstream>
 using namespace std;
 
 class Libro:public Material

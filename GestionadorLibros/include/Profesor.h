@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include "Usuario.h"
+#include <fstream>
 
 //class Material;
 class Estanteria;

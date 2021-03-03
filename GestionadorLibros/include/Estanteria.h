@@ -6,6 +6,7 @@
 #include <vector>
 #include <Alumno.h>
 #include<Profesor.h>
+#include <fstream>
 using namespace std;
 
 class Material;

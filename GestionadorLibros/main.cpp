@@ -17,6 +17,7 @@ using namespace std;
 
 int main()
 {
+    ofstream archivo;
     Estanteria estanteria;
     int x=0, y=0, z, s, v, w, u, p, ind=0, nProf=0, nAlum=0,nLibros=0,nRevistas=0,nEstanteria=0,aux=0;
     string cod,nombres;
@@ -25,8 +26,7 @@ int main()
     Revista listaRevista[20];
     Libro listaLibro[20];
     Estanteria listaEstanteria[20];
-    do
-    {
+    do{
     cout<<"Que accion desea realizar:"<<endl;
     cout<<"1. Registrar usuario"<<endl;
     cout<<"2. Ingresar material"<<endl;
@@ -36,11 +36,9 @@ int main()
     cout<<"6. Imprimir datos"<<endl;
     cout<<"7. Finalizar"<<endl;
     cin>>x;
-    switch(x)
-    {
+    switch(x){
     case 1:
-        do
-        {
+        do{
             system("CLS");
             cout<<"Que tipo de usuario desea ingresar?"<<endl;
             cout<<"1. Profesor"<<endl;
@@ -74,31 +72,29 @@ int main()
 				    system("CLS");
                 break;
             }
-        }while(y!=3);
+        }while(y!=3);       //do while del primer case 1
     break;
     case 2:
-        do
-        {
+        do{
         system("CLS");
         cout<<"Que tipo de material desea ingresar?"<<endl;
         cout<<"1. Revista"<<endl;
         cout<<"2. Libro"<<endl;
         cout<<"3. Retroseder"<<endl;
         cin>>y;
-        switch(y)
-        {
+        switch(y){
             case 1:
                 if(nEstanteria!=0){  
                 listaRevista[nRevistas].registrarRevista();
                 cout<<left;
-                cout<<(3)<<'#';
-                cout<<(10)<<"Nombre";
+                cout<<setw(3)<<'#';
+                cout<<setw(10)<<"Nombre";
                 cout<<endl;
                 for(int i=0;i<nEstanteria;i++){
                     cout<<left<<setw(3)<<i+1;
                     listaEstanteria[i].mostrarDatos();
                     cout<<endl;
-                }
+                    }
                     cout<<endl;
                 do{
                     cout<<"Ingrese numero (#) :";cin>>ind;
@@ -108,21 +104,24 @@ int main()
                         cout<<endl;cout<<"Asignado correctamente"<<endl;
                     }
                 }while(nRevistas<ind or 0==ind);
-                listaRevista[nRevistas].asignarEstanteria(&listaEstanteria[ind-1]);
-                listaEstanteria[ind-1].agregarRevista(&listaRevista[nRevistas]);
-                nRevistas++;
-              
-                cout<<"Registro exitoso!"<<endl;
+                    listaRevista[nRevistas].asignarEstanteria(&listaEstanteria[ind-1]);
+                    listaEstanteria[ind-1].agregarRevista(&listaRevista[nRevistas]);
+                    nRevistas++;
+                    cout<<"Registro exitoso!"<<endl;
+                }
+                else{
+                    cout<<"No existen estanterias para poder realizar esta accion!"<<endl;
+                }
                 system("PAUSE");
-				system("CLS");
+				system("CLS");      
             break;
             case 2:
-            /// faltaaa declararr
+            /// faltaaa declararr//errrrrrrrrror coregir
             if(nEstanteria!=0){  
                 listaLibro[nLibros].registrarLibro();
                 cout<<left;
-                cout<<(3)<<'#';
-                cout<<(10)<<"Nombre";
+                cout<<setw(3)<<'#';
+                cout<<setw(10)<<"Nombre";
                 cout<<endl;
                 for(int i=0;i<nEstanteria;i++){
                     cout<<left<<setw(3)<<i+1;
@@ -131,7 +130,7 @@ int main()
                 }
                     cout<<endl;
                 do{
-                    cout<<"Ingrese numero (#) :";cin>>ind;
+                    cout<<"Ingrese numero (#) :";cin>>ind;//corregir
                     if(nLibros or 0==ind){
                         cout<<"La estanteria que intenta asignar no existe "<<endl;
                     }else{
@@ -141,13 +140,13 @@ int main()
                 listaLibro[nLibros].asignarEstanteria(&listaEstanteria[ind-1]);
                 listaEstanteria[ind-1].agregarLibro(&listaLibro[nLibros]);
                 nLibros++;
-              
                 cout<<"Registro exitoso!"<<endl;
+            }
+            else{
+            cout<<"No existen estanterias para poder realizar esta accion!"<<endl;
+            }
                 system("PAUSE");
 				system("CLS");
-
-
-
             break;
             case 3:
                 cout<<"Retrosediendo..."<<endl;
@@ -160,9 +159,8 @@ int main()
 				system("CLS");
             break;
         }
-        } while (y!=3);
+        } while (y!=3); //do while del primer case 2
     break;
-        }
     case 3:
             system("CLS");
             listaEstanteria[nEstanteria].registrar();
@@ -171,14 +169,13 @@ int main()
             cin>>aux;
             if(aux==1){
                 if(nProf!=0){
-                cout<<setw(3)<<"#";
-                cout<<setw(10)<<"Nombre";
-                cout<<setw(10)<<"Apellido";
-                cout<<setw(10)<<"DNI";
-                cout<<setw(10)<<"Codigo";
-                cout<<endl;
-                for(int i = 0; i <  nProf; i++)
-                    {
+                    cout<<setw(3)<<"#";
+                    cout<<setw(10)<<"Nombre";
+                    cout<<setw(10)<<"Apellido";
+                    cout<<setw(10)<<"DNI";
+                    cout<<setw(10)<<"Codigo";
+                    cout<<endl;
+                    for(int i = 0; i <  nProf; i++){
                     cout<<left<<setw(3)<<i+1;
                     listaProfesor[i].mostrarDatos();
                     cout<<endl;
@@ -215,12 +212,11 @@ int main()
                     cout<<setw(10)<<"DNI";
                     cout<<setw(10)<<"Codigo";
                     cout<<endl;
-                for(int i = 0; i <  nAlum; i++)
-                    {
-                    cout<<left<<setw(3)<<i+1;
-                    listaAlumno[i].mostrarDatos();
-                    cout<<endl;
-                    }
+                    for(int i = 0; i <  nAlum; i++){
+                        cout<<left<<setw(3)<<i+1;
+                        listaAlumno[i].mostrarDatos();
+                        cout<<endl;
+                        }
                     do{
                         cout<<"Ingrese numero (#) :";cin>>ind;
                         if(nProf<ind or 0==ind){
@@ -232,7 +228,6 @@ int main()
                             system("PAUSE");
 				            system("CLS");
                         }
-
                     }while(nAlum<ind or 0==ind);
                     listaEstanteria[nEstanteria].asignarAlumno(&listaAlumno[ind-1]);
                     listaAlumno[ind-1].agregarEstanteria(&listaEstanteria[nEstanteria]);
@@ -241,9 +236,9 @@ int main()
                     system("PAUSE");
 				    system("CLS");
                 }else{
-                cout<<"No hay Alumno registrado";
-                system("PAUSE");
-				system("CLS");
+                    cout<<"No hay Alumno registrado";
+                    system("PAUSE");
+				    system("CLS");
                 }     
             }else{
                 cout<<"DESICION INVALIDA";
@@ -269,48 +264,38 @@ int main()
             cout<<"2. Alumno"<<endl;
             cout<<"3. Retroceder"<<endl;
             cin>>w;
-            if(w==1)
-            {
-                if(nProf!=0 )
-                {
+            if(w==1){
+                if(nProf!=0 ){
                     cout<<left;
                     cout<<setw(3)<<"#";
                     cout<<setw(10)<<"Nombre";
                     cout<<setw(10)<<"Apellido";
                     cout<<setw(10)<<"DNI";
                     cout<<setw(10)<<"Codigo";
-                    for(int i = 0; i <  nProf; i++)
-                    {
+                    for(int i = 0; i <  nProf; i++){
                         cout<<left<<setw(3)<<i+1;
                         listaProfesor[i].mostrarDatos();
                         cout<<endl;
                     }
                     cout<<"Ingrese el (#) del profesor que desea modificar :";
                     cin>>aux;
-                    if(aux>0 && aux<=nProf)
-                    {
+                    if(aux>0 && aux<=nProf){
                         listaProfesor[aux-1].modificar();
                         cout<<endl<<"Modificacion exitosa "<<endl<<endl;
                         system("PAUSE");
 				        system("CLS");
-                    }
-                    else
-                    {
+                    }else{
                         cout<<"No existe el Profesor que intenta modificar "<<endl;
                         system("PAUSE");
 				        system("CLS");
                     }
-                }
-                else
-                {
+                }else{
                     cout<<"No hay Profesores registrados "<<endl;
                     system("PAUSE");
 				    system("CLS");
                 }
-            }else if(w==2)
-            {
-                if(nAlum!=0 )
-                {
+            }else if(w==2){
+                if(nAlum!=0 ){
                     cout<<left;
                     cout<<setw(3)<<"#";
                     cout<<setw(10)<<"Nombre";
@@ -318,30 +303,24 @@ int main()
                     cout<<setw(10)<<"DNI";
                     cout<<setw(10)<<"Codigo";
                     cout<<endl;
-                    for(int i = 0; i <  nAlum; i++)
-                    {
+                    for(int i = 0; i <  nAlum; i++){
                         cout<<left<<setw(3)<<i+1;
                         listaAlumno[i].mostrarDatos();
                         cout<<endl;
                     }
                     cout<<"Ingrese el (#) del alumno que desea modificar :";
                     cin>>aux;
-                    if(aux>0 && aux<=nAlum)
-                    {
+                    if(aux>0 && aux<=nAlum){
                         listaAlumno[aux-1].modificar();
                         cout<<endl<<"Modificacion exitosa "<<endl<<endl;
                         system("PAUSE");
 				        system("CLS");
-                    }
-                    else
-                    {
+                    }else{
                         cout<<"No existe el alumno que intenta modificar "<<endl;
                         system("PAUSE");
 				        system("CLS");
                     }
-                }
-                else
-                {
+                }else{
                     cout<<"No hay alumnos registradas "<<endl;
                     system("PAUSE");
 				    system("CLS");
@@ -353,10 +332,8 @@ int main()
             cout<<"1. Libro"<<endl;
             cout<<"2. Revista"<<endl;
             cin>>w;
-            if(w==1)
-            {
-                if(nLibros!=0 )
-                {
+            if(w==1){
+                if(nLibros!=0 ){
                     cout<<left;
                     cout<<setw(3)<<"#";
                     cout<<setw(10)<<"Titulo";
@@ -365,37 +342,28 @@ int main()
                     cout<<setw(10)<<"Editorial";
                     cout<<setw(10)<<"Edicion";
                     cout<<setw(10)<<"Ciudad";
-                    
-                    for(int i = 0; i <  nLibros; i++)
-                    {
+                    for(int i = 0; i <  nLibros; i++){
                         cout<<left<<setw(3)<<i+1;
                         listaLibro[i].mostrarDatos();
                         cout<<endl;
                     }
                     cout<<"Ingrese el (#) del libro que desea modificar :";
                     cin>>aux;
-                    if(aux>0 && aux<=nLibros)
-                    {
+                    if(aux>0 && aux<=nLibros){
                         listaLibro[aux-1].modificar();
                         cout<<endl<<"Modificacion exitosa "<<endl<<endl;
                         system("PAUSE");
 				        system("CLS");
-                    }
-                    else
-                    {
+                    }else{
                         cout<<"No existe el libro que intenta modificar "<<endl;
                         system("PAUSE");
 				        system("CLS");
                     }
-                }
-                else
-                {
+                }else{
                     cout<<"No hay libros registrados "<<endl;
                 }
-            }else if(w==2)
-            {
-                if(nRevistas!=0 )
-                {
+            }else if(w==2){
+                if(nRevistas!=0 ){
                     cout<<left;
                     cout<<setw(3)<<"#";
                     cout<<setw(10)<<"Titulo";
@@ -406,8 +374,7 @@ int main()
                     cout<<setw(10)<<"Voluemn";
                     cout<<setw(10)<<"Numero";
                     cout<<endl;
-                    for(int i = 0; i <  nRevistas; i++)
-                    {
+                    for(int i = 0; i <  nRevistas; i++){
                         cout<<left<<setw(3)<<i+1;
                         listaRevista[i].mostrarDatos();
                         cout<<endl;
@@ -492,8 +459,7 @@ int main()
                 }
                 break;
                 case 2:
-                if(nAlum!=0)
-                {
+                if(nAlum!=0){
                     cout<<left;
                     cout<<setw(3)<<"#";
                     cout<<setw(10)<<"Nombre";
@@ -501,8 +467,7 @@ int main()
                     cout<<setw(10)<<"DNI";
                     cout<<setw(10)<<"Codigo";
                     cout<<endl;
-                    for(int i = 0; i <  nAlum; i++)
-                    {
+                    for(int i = 0; i <  nAlum; i++){
                         cout<<left<<setw(3)<<i+1;
                         listaAlumno[i].mostrarDatos();
                         cout<<endl;
@@ -510,8 +475,6 @@ int main()
                 }else{
                     cout<<"No hay Alumnos registrados"<<endl;
                 }
-     
-                
                 break;
                 case 3:
                     cout<<"Retrocediendo..."<<endl;
@@ -526,8 +489,7 @@ int main()
             }
             break;
             case 2:
-                do
-                {
+                do{
                     cout<<"Cual tipo de material desea mostrar?"<<endl;
                     cout<<"1. Libro"<<endl;
                     cout<<"2. Revista"<<endl;
@@ -536,8 +498,7 @@ int main()
                     switch(s)
                     {
                         case 1:
-                        if(nLibros!=0)
-                        {
+                        if(nLibros!=0){
                             cout<<left;
                             cout<<setw(3)<<"#";
                             cout<<setw(10)<<"Titulo";
@@ -546,9 +507,9 @@ int main()
                             cout<<setw(10)<<"Editorial";
                             cout<<setw(10)<<"Edicion";
                             cout<<setw(10)<<"Ciudad";
+                            cout<<setw(10)<<"Estanteria";/////////////
                             cout<<endl;
-                            for(int i = 0; i < nLibros; i++)
-                            {
+                            for(int i = 0; i < nLibros; i++){
                                 cout<<left<<setw(3)<<i+1;
                                 listaLibro[i].mostrarDatos();
                                 cout<<endl;   
@@ -556,18 +517,14 @@ int main()
                             cout<<endl;
                             system("PAUSE");
 				            system("CLS");
-                        }
-                        else
-                        {
+                        }else{
                             cout<<"No hay libros registrados "<<endl;
                             system("PAUSE");
 				            system("CLS");
                         }
-                    
                         break;
                         case 2:
-                        if(nRevistas!=0)
-                        {
+                        if(nRevistas!=0){
                             cout<<setw(3)<<"#";
                             cout<<setw(10)<<"Titulo";
                             cout<<setw(10)<<"Autor";
@@ -576,9 +533,9 @@ int main()
                             cout<<setw(10)<<"Anio";
                             cout<<setw(10)<<"Voluemn";
                             cout<<setw(10)<<"Numero";
+                            cout<<setw(10)<<"Estanteria";////////
                             cout<<endl;
-                            for(int i = 0; i < nRevistas; i++)
-                            {
+                            for(int i = 0; i < nRevistas; i++){
                                 cout<<left<<setw(3)<<i+1;
                                 listaRevista[i].mostrarDatos();
                                 cout<<endl;   
@@ -586,9 +543,7 @@ int main()
                             cout<<endl;
                             system("PAUSE");
 				            system("CLS");
-                        }
-                        else
-                        {
+                        }else{
                             cout<<"No hay revistas registrados "<<endl;
                             system("PAUSE");
 				            system("CLS");
@@ -631,7 +586,7 @@ int main()
 				system("CLS");
                 }
             }else if(aux==2){
-                                if(nEstanteria!=0){
+                    if(nEstanteria!=0){
                     cout<<setw(3)<<"#";
                     cout<<setw(10)<<"Nombre";
                     cout<<setw(10)<<"Nombre Usuario";
@@ -649,7 +604,6 @@ int main()
                 system("PAUSE");
 				system("CLS");
                 }
-
             }else{
                 cout<<"Opcion invalida "<<endl;
             }
@@ -667,11 +621,8 @@ int main()
         }
     } while (v!=4);
     
-
     case 6:
-    	ofstream archivo;
-        do
-        {
+        do{
             cout<<"Cuales tipos de datos desea imprimir?"<<endl;
             cout<<"1. Usuario"<<endl;
             cout<<"2. Material"<<endl;
@@ -681,8 +632,7 @@ int main()
             switch(u)
             {
                 case 1:
-                    do
-                    {
+                    do{
                         cout<<"Cual tipo de usuario desea mostrar?"<<endl;
                         cout<<"1. Profesor"<<endl;
                         cout<<"2. Alumno"<<endl;
@@ -691,23 +641,24 @@ int main()
                         switch(p)
                         {
                             case 1:
-	                            archivo.open("Profesores.txt", ios::out);
+	                            //archivo.open("Profesores.txt", ios::out);
                                 for(int i = 0; i <  nProf; i++)
                                 {
-                                    archivo<<listaProfesor[i].mostrarDatos()<<endl;
+                                    //archivo<<listaProfesor[i].mostrarDatos()<<endl;
                                 }
-                                archivo.close();
+                                //archivo.close();
                                 cout<<"Impresion exitosa!"<<endl;
                                 system("PAUSE");
 				                system("CLS");
                             break;
                             case 2:
-	                            archivo.open("Alumnos.txt", ios::out);
-                                for(int i = 0; i <  nAlum; i++)
-                                {
-                                    archivo<<listaAlumno[i].mostrarDatos()<<endl;
-                                }
+                                archivo.open("Alumnos.txt", ios :: trunc);
+                                archivo<<" ";
                                 archivo.close();
+                                for(int i = 0; i < nAlum; i++)
+                                {
+                                    listaAlumno[i].imprimirAlumno();
+                                }
                                 cout<<"Impresion exitosa!"<<endl;
                                 system("PAUSE");
 				                system("CLS");
@@ -736,23 +687,23 @@ int main()
                         switch(p)
                         {
                             case 1:
-	                            archivo.open("Libros.txt", ios::out);
+	                            //archivo.open("Libros.txt", ios::out);
                                 for(int i = 0; i <  nLibros; i++)
                                 {
-                                    archivo<<listaLibro[i].mostrarDatos()<<endl;
+                                    //archivo<<listaLibro[i].mostrarDatos()<<endl;
                                 }
-                                archivo.close();
+                                //archivo.close();
                                 cout<<"Impresion exitosa!"<<endl;
                                 system("PAUSE");
 				                system("CLS");
                             break;
                             case 2:
-	                            archivo.open("Revista.txt", ios::out);
+	                            //archivo.open("Revista.txt", ios::out);
                                 for(int i = 0; i <  nRevistas; i++)
                                 {
-                                    archivo<<listaRevista[i].mostrarDatos()<<endl;
+                                    //archivo<<listaRevista[i].mostrarDatos()<<endl;
                                 }
-                                archivo.close();
+                                //archivo.close();
                                 cout<<"Impresion exitosa!"<<endl;
                                 system("PAUSE");
 				                system("CLS");
@@ -790,11 +741,11 @@ int main()
     break;
     case 7:
         cout<<"Finalizando...";
+        
     break;
-    }
-    }
+    }               //primer switch (x)
+    }while(x!=7);  //primer do while
     
+   return 0; 
 
-  }while(x!=7); //switch
-    return 0;
-}
+  } //main

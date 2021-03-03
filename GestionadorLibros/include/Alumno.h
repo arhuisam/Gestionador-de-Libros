@@ -4,6 +4,7 @@
 #include "Usuario.h"
 #include <string>
 #include <vector>
+#include <fstream>
 using namespace std;
 class Estanteria;
 class Alumno:public Usuario
@@ -23,6 +24,7 @@ class Alumno:public Usuario
 		void modificar();
 		void agregarEstanteria(Estanteria*);
 		char* getAlumno(); //para q muestre cuando llamemos a mostrar estanteria
+		void imprimirAlumno();
 };
 
 #endif
