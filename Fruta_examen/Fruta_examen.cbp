@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="GestionadorLibros" />
+		<Option title="Fruta_examen" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/GestionadorLibros" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/Fruta_examen" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -17,7 +17,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/GestionadorLibros" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/Fruta_examen" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -34,23 +34,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="include/Alumno.h" />
-		<Unit filename="include/Estanteria.h" />
-		<Unit filename="include/EstanteriaAlu.h" />
-		<Unit filename="include/Libro.h" />
-		<Unit filename="include/Material.h" />
-		<Unit filename="include/Profesor.h" />
-		<Unit filename="include/Revista.h" />
-		<Unit filename="include/Usuario.h" />
+		<Unit filename="include/Fruta.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/Alumno.cpp" />
-		<Unit filename="src/Estanteria.cpp" />
-		<Unit filename="src/EstanteriaAlu.cpp" />
-		<Unit filename="src/Libro.cpp" />
-		<Unit filename="src/Material.cpp" />
-		<Unit filename="src/Profesor.cpp" />
-		<Unit filename="src/Revista.cpp" />
-		<Unit filename="src/Usuario.cpp" />
+		<Unit filename="src/Fruta.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

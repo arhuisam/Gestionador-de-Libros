@@ -1,9 +1,9 @@
 # depslib dependency file v1.0
-1614751617 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\main.cpp
+1614753774 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\main.cpp
 	<iostream>
 	"Profesor.h"
 	"Estanteria.h"
-	"EstanteriaAlum.h"
+	"EstanteriaAlu.h"
 	"Libro.h"
 	"Alumno.h"
 	"Profesor.h"
