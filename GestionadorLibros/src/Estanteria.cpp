@@ -5,7 +5,10 @@
 #include "Material.h"
 #include "Revista.h"
 #include "Libro.h"
+
 #include <iomanip>
+#include <fstream>
+
 using namespace std;
 
 /*void Estanteria::crearLibro(string titulo,string autor,string categoria,string editorial,string cod_prof,string cod_alu,string edicion,string ciudad){
@@ -59,5 +62,8 @@ void Estanteria ::agregarLibro(Libro *lib){
 
 void Estanteria :: imprimirEstanteria()
 {
-    
+    ofstream archivo;
+    archivo.open("Alumnos.txt",ios :: trunc | ios :: app);
+    archivo<< <<" "<<apellidos<<" "<<DNI<<" "<<Cod_Alu<<endl;
+    archivo.close();
 }

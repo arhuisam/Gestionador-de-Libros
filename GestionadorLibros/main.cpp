@@ -814,7 +814,13 @@ int main()
                     switch(p)
                     {
                         case 1:
-
+                            for(int i = 0; i <  nLibros; i++)
+                                {
+                                    listaEstanteria[i].imprimirLibro();
+                                }
+                                cout<<"Impresion exitosa!"<<endl;
+                                system("PAUSE");
+				                system("CLS")
                         break;
                         case 2:
 
@@ -868,7 +874,7 @@ int main()
                 cout<<"Ingrese el codigo del DNI"<<endl;
                 cin>>dni;
                 fflush(stdin);
-					for(int i=0;i<nAlum;i++){
+					for(int i=0;i<nProf;i++){
 						if(strcmp(dni,listaProfesor[i].getProfesorDNI())==0){
 							indice=i;
 							comprobador=1;
@@ -884,6 +890,24 @@ int main()
 			    	system("CLS");
 
                 break;
+                default:
+                    cout<<"DESICION INVALIDA"<<endl;
+                    system("PAUSE");
+			    	system("CLS");
+
+                break;
+            }
+
+      }while(p!=3);
+                default:
+                    cout<<"DESICION INVALIDA"<<endl;
+                    system("PAUSE");
+			    	system("CLS");
+
+                break;
+            }
+
+      }while(p!=3);
                 default:
                     cout<<"DESICION INVALIDA"<<endl;
                     system("PAUSE");
