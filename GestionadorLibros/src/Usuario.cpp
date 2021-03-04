@@ -30,7 +30,6 @@ void Usuario ::registrar(){
 
 /*void Usuario::mostrarDatos(){
     cout<<"Nombres: "<<nombres<<endl;
-    cout<<"Apellidos: "<<apellidos<<endl;
-    cout<<"DNI: "<<DNI<<endl;
+    cout<<"Apellidos: "<<apellidos<<endl;    cout<<"DNI: "<<DNI<<endl;
     cout<<endl;
 }*/

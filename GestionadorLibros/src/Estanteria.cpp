@@ -64,6 +64,6 @@ void Estanteria :: imprimirEstanteria()
 {
     ofstream archivo;
     archivo.open("Alumnos.txt",ios :: trunc | ios :: app);
-    archivo<< <<" "<<apellidos<<" "<<DNI<<" "<<Cod_Alu<<endl;
+    archivo<<Nombre<<" "<<profesor<<" "<<revista<<" "<<libro<<endl;
     archivo.close();
 }
