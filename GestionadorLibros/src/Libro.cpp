@@ -46,3 +46,11 @@ void Libro :: imprimirLibro(){
     archivo<<Titulo<<" "<<Autor<<" "<<Categoria<<" "<<Editorial<<" "<<Edicion<<" "<<Ciudad<<endl;
     archivo.close();
 }
+void Libro ::mostrarDatosEstanteria(){
+    Libro ::mostrarDatos();
+    cout<<estanteria->getEstanteria();   
+}
+void Libro ::mostrarDatosEstanteriaalu(){
+    Libro::mostrarDatos();
+    cout<<estanteriaAlu->getEstanteriaalu();
+}

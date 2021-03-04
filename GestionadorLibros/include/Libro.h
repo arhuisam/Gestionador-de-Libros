@@ -6,6 +6,7 @@
 #include <vector>
 #include "Material.h"
 #include "Estanteria.h"
+#include "EstanteriaAlu.h"
 
 using namespace std;
 
@@ -24,6 +25,8 @@ class Libro:public Material
 		 void asignarEstanteria(Estanteria*);
 		 void asignarEstanteriaAlu(EstanteriaAlu*);
 		 void imprimirLibro();
+		 void mostrarDatosEstanteria();
+		 void mostrarDatosEstanteriaalu();
 };
 
 #endif

@@ -21,6 +21,7 @@ int main()
     ofstream archivo;
     Estanteria estanteria;
     int x=0, y=0, z, s, v, w, u, p, ind=0, nProf=0, nAlum=0,nLibros=0,nRevistas=0,nEstanteria=0,aux=0,nEstanteriaalu=0,confu=0,confa=0;
+    char libro[20],revi[20];
     string cod,nombres;
     Profesor listaProfesor[20];
     Alumno listaAlumno[20];
@@ -28,7 +29,7 @@ int main()
     Libro listaLibro[20];
     Estanteria listaEstanteria[20];
     EstanteriaAlu listaEstanteriaalu[20];
-    char a[10];
+
 
     do{
     cout<<"Que accion desea realizar:"<<endl;
@@ -130,9 +131,9 @@ int main()
                     }
                     for(int i = nRevistas-1;i<nRevistas;i++){
                             if(aux==1){
-                                 a[nRevistas-1]='p';
+                                 revi[nRevistas-1]='p';
                             }else{
-                                a[nRevistas-1]='a';
+                                revi[nRevistas-1]='a';
                             }
 
                     }
@@ -182,6 +183,14 @@ int main()
                         listaLibro[nLibros].asignarEstanteriaAlu(&listaEstanteriaalu[ind-1-nEstanteria]);
                         listaEstanteriaalu[ind-1-nEstanteria].agregarLibro(&listaLibro[nLibros]);
                         nLibros++;
+                    }
+                    for(int i = nLibros-1;i<nLibros;i++){
+                        if(aux==1){
+                            libro[nLibros-1]='p';
+                        }else{
+                            libro[nLibros-1]='a';
+                            }
+
                     }
                     cout<<"Registro exitoso!"<<endl;
             }
@@ -263,7 +272,8 @@ int main()
                         cout<<endl;
                         }
                     do{
-                        cout<<"Ingrese numero (#) :";cin>>ind;
+                        cout<<"Ingrese numero (#) :";
+                        cin>>ind;
                         if(nAlum<ind or 0==ind){
                             cout<<"El alumno que intenta asignar no existe "<<endl;
                             system("PAUSE");
@@ -557,8 +567,21 @@ int main()
                             cout<<endl;
                             for(int i = 0; i < nLibros; i++){
                                 cout<<left<<setw(3)<<i+1;
-                                listaLibro[i].mostrarDatos();
+                                listaLibro[i].mostrarDatosEstanteria();
+                                //listaRevista[i].mostrarDatosEstanteriaalu();
                                 cout<<endl;
+                            }
+                            for(int i = 0; i < nLibros; i++){
+                                cout<<left<<setw(3)<<i+1;
+                              if(libro[i]=='p'){
+                                        listaLibro[i].mostrarDatosEstanteria();
+                                        cout<<endl;
+                                    }else if(libro[i]=='a'){
+                                        listaLibro[i].mostrarDatosEstanteriaalu();
+                                        cout<<endl;
+                                    }else{
+                                        cout<<"error";
+                                    }                        
                             }
                             cout<<endl;
                             system("PAUSE");
@@ -584,17 +607,14 @@ int main()
 
                             for(int i = 0; i < nRevistas; i++){
                                 cout<<left<<setw(3)<<i+1;
-                                    if(a[i]=='p'){
+                                    if(revi[i]=='p'){
                                         listaRevista[i].mostrarDatosEstanteria();
                                         cout<<endl;
-                                    }else if(a[i]=='a'){
+                                    }else if(revi[i]=='a'){
                                         listaRevista[i].mostrarDatosEstanteriaalu();
                                         cout<<endl;
-                                    }else{
-                                        cout<<"ERROR";
                                     }
                                 }
-
                             /*for(int i = 0; i < nRevistas; i++){
                                 cout<<left<<setw(3)<<i+1;
                                 listaRevista[i].mostrarDatosEstanteria();
@@ -609,7 +629,6 @@ int main()
                                 cout<<endl;
                                 cout<<"hola";
                             }*/
-
                             cout<<endl;
                             system("PAUSE");
 				            system("CLS");
