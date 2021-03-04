@@ -13,7 +13,7 @@ class Usuario
 	protected:
 		char nombres[20];
 		string apellidos;
-		string DNI;
+		char DNI[10];
 		//int nEstanteria=0;
 		//Estanteria *estanteria[20];
 		//EstanteriaAlum*estanteriaAlum[20];

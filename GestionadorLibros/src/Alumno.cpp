@@ -34,8 +34,10 @@ void Alumno :: agregarEstanteriaAlu(EstanteriaAlu *E){
     nEstanteriaalu = nEstanteriaalu+1;
 }
 char* Alumno :: getAlumno(){
-
     return nombres;
+}
+char* Alumno ::getAlumnoDNI(){
+    return DNI;
 }
 void Alumno :: imprimirAlumno(){
     ofstream archivo;

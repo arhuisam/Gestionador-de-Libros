@@ -27,6 +27,7 @@ class Alumno:public Usuario
 		void modificar();
 		void agregarEstanteriaAlu(EstanteriaAlu*);
 		char* getAlumno(); //para q muestre cuando llamemos a mostrar estanteria
+		char* getAlumnoDNI();
 		void imprimirAlumno();
 };
 

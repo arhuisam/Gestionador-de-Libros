@@ -13,6 +13,7 @@
 #include <fstream>
 #include<stdlib.h>
 #include<stdio.h>
+#include<string.h>
 
 using namespace std;
 
@@ -20,8 +21,9 @@ int main()
 {
     ofstream archivo;
     Estanteria estanteria;
-    int x=0, y=0, z, s, v, w, u, p, ind=0, nProf=0, nAlum=0,nLibros=0,nRevistas=0,nEstanteria=0,aux=0,nEstanteriaalu=0,confu=0,confa=0;
+    int x=0, y=0, z, s, v, w, u, p, ind=0, nProf=0, nAlum=0,nLibros=0,nRevistas=0,nEstanteria=0,aux=0,nEstanteriaalu=0,indice,comprobador;
     char libro[20],revi[20];
+    char dni[10];
     string cod,nombres;
     Profesor listaProfesor[20];
     Alumno listaAlumno[20];
@@ -39,7 +41,8 @@ int main()
     cout<<"4. Modificar datos"<<endl;
     cout<<"5. Mostrar Lista "<<endl;
     cout<<"6. Imprimir datos"<<endl;
-    cout<<"7. Finalizar"<<endl;
+    cout<<"7. Buscar usuario"<<endl;
+    cout<<"8. Finalizar"<<endl;
     cin>>x;
     switch(x){
     case 1:
@@ -121,13 +124,10 @@ int main()
                         listaEstanteria[ind-1].agregarRevista(&listaRevista[nRevistas]);
                         nRevistas++;
 
-                        confu++;
-
                     }else if(aux==2){
                         listaRevista[nRevistas].asignarEstanteriaAlu(&listaEstanteriaalu[ind-1-nEstanteria]);
                         listaEstanteriaalu[ind-1-nEstanteria].agregarRevista(&listaRevista[nRevistas]);
                         nRevistas++;
-                        confa++;
                     }
                     for(int i = nRevistas-1;i<nRevistas;i++){
                             if(aux==1){
@@ -567,12 +567,6 @@ int main()
                             cout<<endl;
                             for(int i = 0; i < nLibros; i++){
                                 cout<<left<<setw(3)<<i+1;
-                                listaLibro[i].mostrarDatosEstanteria();
-                                //listaRevista[i].mostrarDatosEstanteriaalu();
-                                cout<<endl;
-                            }
-                            for(int i = 0; i < nLibros; i++){
-                                cout<<left<<setw(3)<<i+1;
                               if(libro[i]=='p'){
                                         listaLibro[i].mostrarDatosEstanteria();
                                         cout<<endl;
@@ -847,11 +841,66 @@ int main()
         } while (u!=4);
     break;
     case 7:
+        do{
+        cout<<"1. Buscar Alumno"<<endl;
+        cout<<"2. Buscar Profesor "<<endl;
+        cout<<"3. Retroceder "<<endl;
+        cout<<"Ingrese su opcion :";
+        cin>>p;
+      
+            switch(p){
+                case 1:
+                cout<<"Ingrese el codigo del DNI"<<endl;
+                cin>>dni;
+				fflush(stdin);
+					for(int i=0;i<nAlum;i++){
+						if(strcmp(dni,listaAlumno[i].getAlumnoDNI())==0){
+							indice=i;
+							comprobador=1;
+                            cout<<"Se ecuentro el Alumno"<<endl;
+                            system("PAUSE");
+						}else{
+                            cout<<"No se ecuentro el Alumno"<<endl;
+                        }	
+					}
+                break;
+                case 2:
+                cout<<"Ingrese el codigo del DNI"<<endl;
+                cin>>dni;
+                fflush(stdin);
+					for(int i=0;i<nAlum;i++){
+						if(strcmp(dni,listaProfesor[i].getProfesorDNI())==0){
+							indice=i;
+							comprobador=1;
+                            cout<<"Se ecuentro el Profesor"<<endl;
+						}else{
+                            cout<<"NO se ecuentro el Profesor"<<endl;
+                        }	
+					}
+                break;
+                case 3:
+                    cout<<"Retrocediendo..."<<endl;
+                    system("PAUSE");
+			    	system("CLS");
+
+                break;
+                default:
+                    cout<<"DESICION INVALIDA"<<endl;
+                    system("PAUSE");
+			    	system("CLS");
+
+                break;
+            }
+
+      }while(p!=3);
+
+    break;
+        case 8:
         cout<<"Finalizando...";
 
     break;
     }               //primer switch (x)
-    }while(x!=7);  //primer do while
+    }while(x!=8);  //primer do while
 
    return 0;
 

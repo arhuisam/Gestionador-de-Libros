@@ -25,7 +25,8 @@ class Profesor :public Usuario
 		void modificar();
 		//void asignarProfesor();
 		void agregarEstanteria(Estanteria*);
-		char* getProfesor();  
+		char* getProfesor();
+		char* getProfesorDNI();  
 		void imprimirProfesor();
 };
 

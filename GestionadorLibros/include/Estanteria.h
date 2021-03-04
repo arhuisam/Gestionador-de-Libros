@@ -47,7 +47,7 @@ class Estanteria
 	//void crearRevista(string ,string ,string ,string ,string,string,string,string,int);
 	//void agregarAlumno(string,string,string,int);
 	//void agregarProfesor(string,string,string,int);
-
+	void imprimirEstanteria();
 };
 
 #endif

@@ -37,6 +37,9 @@ void Profesor :: agregarEstanteria(Estanteria *E){
 char* Profesor :: getProfesor(){
     return nombres;
 }
+char* Profesor ::getProfesorDNI(){
+    return DNI;
+}
 void Profesor :: imprimirProfesor(){
     ofstream archivo;
     archivo.open("Profesores.txt",ios :: trunc | ios :: app);

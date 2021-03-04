@@ -56,3 +56,8 @@ void Estanteria ::agregarLibro(Libro *lib){
     nLibros = nLibros+1;
 
 }
+
+void Estanteria :: imprimirEstanteria()
+{
+    
+}
