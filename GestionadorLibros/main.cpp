@@ -168,7 +168,7 @@ int main()
 
                     }else if(aux==2){
                         listaLibro[nLibros].asignarEstanteriaAlu(&listaEstanteriaalu[ind-1-nEstanteria]);
-                        listaEstanteriaalu[ind-1+nEstanteria].agregarLibro(&listaLibro[nLibros]);
+                        listaEstanteriaalu[ind-1-nEstanteria].agregarLibro(&listaLibro[nLibros]);
                         nLibros++;
                     }
                     cout<<"Registro exitoso!"<<endl;
@@ -569,11 +569,19 @@ int main()
                             cout<<setw(10)<<"Numero";
                             cout<<setw(10)<<"Estanteria";////////
                             cout<<endl;
-                            for(int i = 0; i < nRevistas; i++){
+                            for(int i = 0; i < nRevistas-nEstanteria+1; i++){
                                 cout<<left<<setw(3)<<i+1;
-                                listaRevista[i].mostrarDatos();
+                                listaRevista[i].mostrarDatosEstanteria();
+                                //listaRevista[i].mostrarDatosEstanteriaalu();
                                 cout<<endl;
                             }
+                            for(int i = nEstanteria; i < nRevistas; i++){
+                                cout<<left<<setw(3)<<i+1;
+                                listaRevista[i].mostrarDatosEstanteriaalu();
+                                //listaRevista[i].mostrarDatosEstanteriaalu();
+                                cout<<endl;
+                            }
+                            
                             cout<<endl;
                             system("PAUSE");
 				            system("CLS");
@@ -757,16 +765,20 @@ int main()
 
                 break;
                 case 3:
-                    cout<<"Que tipo de estanteria desea imprimir"<<endl;
+                    cout<<"Que tipo de estanteria desea imprimir?"<<endl;
                     cout<<"1. Estanteria de alumnos"<<endl;
                     cout<<"2. Estanteria de profesores"<<endl;
+                    cout<<"3. Retroceder"<<endl;
                     cin>>p;
                     switch(p)
                     {
                         case 1:
-
+                            
                         break;
                         case 2:
+                        
+                        break;
+                        case 3:
                         
                         break;
                         default:
