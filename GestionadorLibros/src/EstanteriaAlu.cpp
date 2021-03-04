@@ -43,13 +43,21 @@ void EstanteriaAlu :: mostrarDatosAlu(){
     EstanteriaAlu ::mostrarDatos();
     cout<<alumno->getAlumno();
 }
-void EstanteriaAlu ::agregarRevista(Revista *revi){
+void EstanteriaAlu :: agregarRevista(Revista *revi){
     revista[nRevistas] = revi;
     nRevistas = nRevistas+1;
 }
-void EstanteriaAlu ::agregarLibro(Libro *lib){
+void EstanteriaAlu :: agregarLibro(Libro *lib){
     libro[nLibros] = lib;
     nLibros = nLibros+1;
 
+}
+
+void EstanteriaAlu :: imprimirEstanteriaAlu()
+{
+    ofstream archivo;
+    archivo.open("Alumnos.txt",ios :: trunc | ios :: app);
+    archivo<<Nombre<<" "<<profesor<<" "<<revista<<" "<<libro<<endl;
+    archivo.close();
 }
 

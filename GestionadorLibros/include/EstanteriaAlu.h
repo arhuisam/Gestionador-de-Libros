@@ -42,7 +42,7 @@ class EstanteriaAlu
 	void agregarLibro(Libro*);
 	//int cantidadlibros(Estanteria*);
 	void asignarAlumno(Alumno*);
-
+	void imprimirEstanteriaAlu();
 
 	char* getEstanteriaalu(); //para mostrar los materiales a q estanteria pertenece
 

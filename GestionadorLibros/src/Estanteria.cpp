@@ -63,7 +63,7 @@ void Estanteria ::agregarLibro(Libro *lib){
 void Estanteria :: imprimirEstanteria()
 {
     ofstream archivo;
-    archivo.open("Alumnos.txt",ios :: trunc | ios :: app);
+    archivo.open("Profesores.txt",ios :: trunc | ios :: app);
     archivo<<Nombre<<" "<<profesor<<" "<<revista<<" "<<libro<<endl;
     archivo.close();
 }

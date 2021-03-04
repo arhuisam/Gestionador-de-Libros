@@ -42,7 +42,15 @@ char* Alumno ::getAlumnoDNI(){
 }
 void Alumno :: imprimirAlumno(){
     ofstream archivo;
-    archivo.open("Alumnos.txt",ios :: trunc | ios :: app);
+    archivo.open("Alumnos.txt", ios :: trunc | ios :: app);
+    if(!archivo.is_open())
+	{
+		cout<<"Archivo no encontrado..."<<endl;
+	}
+	else
+	{
+		cout<<"Se encontro archivo!"<<endl;
+    }
     archivo<<nombres<<" "<<apellidos<<" "<<DNI<<" "<<Cod_Alu<<endl;
     archivo.close();
 }

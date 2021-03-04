@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1614840715 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\main.cpp
+1614842676 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\main.cpp
 	<iostream>
 	"Profesor.h"
 	"Estanteria.h"
@@ -57,7 +57,7 @@
 	"Estanteria.h"
 	"EstanteriaAlu.h"
 
-1614840050 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\alumno.cpp
+1614843306 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\alumno.cpp
 	"Alumno.h"
 	<iomanip>
 	<fstream>
@@ -74,7 +74,7 @@
 	<iostream>
 	<vector>
 
-1614840383 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\estanteria.cpp
+1614842019 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\estanteria.cpp
 	"Estanteria.h"
 	"Usuario.h"
 	"Alumno.h"
@@ -105,7 +105,7 @@
 	<fstream>
 	<iomanip>
 
-1614745820 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\usuario.cpp
+1614841531 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\usuario.cpp
 	"Usuario.h"
 	<string.h>
 
@@ -117,7 +117,7 @@
 	<Profesor.h>
 	<fstream>
 
-1614825364 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\estanteriaalu.cpp
+1614842019 source:d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\src\estanteriaalu.cpp
 	"EstanteriaAlu.h"
 	"Usuario.h"
 	"Alumno.h"
@@ -127,7 +127,7 @@
 	"Libro.h"
 	<iomanip>
 
-1614825354 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\estanteriaalu.h
+1614842019 d:\clases de la universidad\2020-ii\programacion avanzada\github\libros\gestionadorlibros\include\estanteriaalu.h
 	<string>
 	<iostream>
 	<vector>

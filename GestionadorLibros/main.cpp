@@ -11,9 +11,9 @@
 #include "Revista.h"
 #include <iomanip>
 #include <fstream>
-#include<stdlib.h>
-#include<stdio.h>
-#include<string.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 
 using namespace std;
 
@@ -596,15 +596,11 @@ int main()
                                 {
                                     listaProfesor[i].imprimirProfesor();
                                 }
-                                //archivo.close();
                                 cout<<"Impresion exitosa!"<<endl;
                                 system("PAUSE");
 				                system("CLS");
                             break;
                             case 2:
-                                //archivo.open("Alumnos.txt",ios :: trunc | ios :: app);
-                                //archivo<<"Nombres   Apellidos   DNI   Cod_Alu "<<endl;
-                                //archivo.close();
                                 for(int i = 0; i < nAlum; i++)
                                 {
                                     listaAlumno[i].imprimirAlumno();
@@ -676,10 +672,20 @@ int main()
                     cout<<"Que tipo de estanteria desea imprimir?"<<endl;
                     cout<<"1. Estanteria de alumnos"<<endl;
                     cout<<"2. Estanteria de profesoresres"<<endl;
-                    cout<<"3. Retroceder"<<ealumnos                    cin>>p;
+                    cout<<"3. Retroceder"<<endl;                    
+                    cin>>p;
                     switch(p)
                     {
                         case 1:
+                            for(int i = 0; i <  nLibros; i++)
+                                {
+                                    listaEstanteriaalu[i].imprimirEstanteriaAlu();
+                                }
+                                cout<<"Impresion exitosa!"<<endl;
+                                system("PAUSE");
+				                system("CLS");
+                        break;
+                        case 2:
                             for(int i = 0; i <  nLibros; i++)
                                 {
                                     listaEstanteria[i].imprimirEstanteria();
@@ -688,13 +694,16 @@ int main()
                                 system("PAUSE");
 				                system("CLS");
                         break;
-                        case 2:
-
-                        break;
                         case 3:
+                            cout<<"Retrocediendo..."<<endl;
+                            system("PAUSE");
+				            system("CLS");
 
                         break;
                         default:
+                            cout<<"DESICION INVALIDA"<<endl;
+                            system("PAUSE");
+				            system("CLS");
 
                         break;
                     }
