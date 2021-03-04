@@ -20,7 +20,7 @@ int main()
 {
     ofstream archivo;
     Estanteria estanteria;
-    int x=0, y=0, z, s, v, w, u, p, ind=0, nProf=0, nAlum=0,nLibros=0,nRevistas=0,nEstanteria=0,aux=0,nEstanteriaalu=0;
+    int x=0, y=0, z, s, v, w, u, p, ind=0, nProf=0, nAlum=0,nLibros=0,nRevistas=0,nEstanteria=0,aux=0,nEstanteriaalu=0,confu=0,confa=0;
     string cod,nombres;
     Profesor listaProfesor[20];
     Alumno listaAlumno[20];
@@ -28,6 +28,7 @@ int main()
     Libro listaLibro[20];
     Estanteria listaEstanteria[20];
     EstanteriaAlu listaEstanteriaalu[20];
+    char a[10];
 
     do{
     cout<<"Que accion desea realizar:"<<endl;
@@ -101,7 +102,7 @@ int main()
                 for(int i=0;i<nEstanteriaalu;i++){
                     cout<<left<<setw(3)<<1+nEstanteria+i;
                     listaEstanteriaalu[i].mostrarDatos();
-                   cout<<endl; 
+                   cout<<endl;
                 }
                     cout<<"Ingrese numero (#) :";cin>>ind;//corregir
                /* do{
@@ -119,10 +120,21 @@ int main()
                         listaEstanteria[ind-1].agregarRevista(&listaRevista[nRevistas]);
                         nRevistas++;
 
+                        confu++;
+
                     }else if(aux==2){
                         listaRevista[nRevistas].asignarEstanteriaAlu(&listaEstanteriaalu[ind-1-nEstanteria]);
                         listaEstanteriaalu[ind-1-nEstanteria].agregarRevista(&listaRevista[nRevistas]);
                         nRevistas++;
+                        confa++;
+                    }
+                    for(int i = nRevistas-1;i<nRevistas;i++){
+                            if(aux==1){
+                                 a[nRevistas-1]='p';
+                            }else{
+                                a[nRevistas-1]='a';
+                            }
+
                     }
                     cout<<"Registro exitoso!"<<endl;
                 }
@@ -148,7 +160,7 @@ int main()
                 for(int i=0;i<nEstanteriaalu;i++){
                 cout<<left<<setw(3)<<1+nEstanteria+i;
                 listaEstanteriaalu[i].mostrarDatos();
-                cout<<endl; 
+                cout<<endl;
                 }
                 cout<<"Ingrese numero (#) :";cin>>ind;//corregir
               /*  do{
@@ -194,7 +206,7 @@ int main()
     break;
     case 3:
             system("CLS");
-            
+
             cout<<"Que tipo de usuario desea asignarle "<<endl;
             cout<<"(Profesor =1/Alumno =2) :"<<endl;
             cin>>aux;
@@ -569,19 +581,35 @@ int main()
                             cout<<setw(10)<<"Numero";
                             cout<<setw(10)<<"Estanteria";////////
                             cout<<endl;
-                            for(int i = 0; i < nRevistas-nEstanteria+1; i++){
+
+                            for(int i = 0; i < nRevistas; i++){
+                                cout<<left<<setw(3)<<i+1;
+                                    if(a[i]=='p'){
+                                        listaRevista[i].mostrarDatosEstanteria();
+                                        cout<<endl;
+                                    }else if(a[i]=='a'){
+                                        listaRevista[i].mostrarDatosEstanteriaalu();
+                                        cout<<endl;
+                                    }else{
+                                        cout<<"ERROR";
+                                    }
+                                }
+
+                            /*for(int i = 0; i < nRevistas; i++){
                                 cout<<left<<setw(3)<<i+1;
                                 listaRevista[i].mostrarDatosEstanteria();
                                 //listaRevista[i].mostrarDatosEstanteriaalu();
                                 cout<<endl;
                             }
-                            for(int i = nEstanteria; i < nRevistas; i++){
+
+                            for(int i = confu; i < nRevistas; i++){
                                 cout<<left<<setw(3)<<i+1;
                                 listaRevista[i].mostrarDatosEstanteriaalu();
                                 //listaRevista[i].mostrarDatosEstanteriaalu();
                                 cout<<endl;
-                            }
-                            
+                                cout<<"hola";
+                            }*/
+
                             cout<<endl;
                             system("PAUSE");
 				            system("CLS");
@@ -649,7 +677,7 @@ int main()
             }else{
                 cout<<"Opcion invalida "<<endl;
             }
-            
+
             break;
             case 4:
                 cout<<"Retrocediendo..."<<endl;
@@ -773,16 +801,16 @@ int main()
                     switch(p)
                     {
                         case 1:
-                            
+
                         break;
                         case 2:
-                        
+
                         break;
                         case 3:
-                        
+
                         break;
                         default:
-                        
+
                         break;
                     }
                 break;
