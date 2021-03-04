@@ -2,6 +2,8 @@
 #include<iostream>
 #include <string>
 #include <iomanip>
+#include <fstream>
+
 using namespace std;
 
 /*Revista::Revista(string titulo,string autor,string categoria,string editorial,Profesor *pro,Alumno *alu,string anio,string volumen,int numero) :Material(titulo,autor,categoria,editorial,pro,alu){
@@ -36,4 +38,24 @@ void Revista::modificar(){
 }
 void Revista :: asignarEstanteria(Estanteria *estante){
     estanteria =estante;
+}
+void Revista :: asignarEstanteriaAlu(EstanteriaAlu*estantealu){
+    estanteriaAlu=estantealu;
+}
+void Revista ::mostrarDatosEstanteria(){
+    Revista ::mostrarDatos();
+    cout<<estanteria->getEstanteria();
+    
+}
+void Revista ::mostrarDatosEstanteriaalu(){
+    Revista::mostrarDatos();
+    cout<<estanteriaAlu->getEstanteriaalu();
+}
+
+void Revista :: imprimirRevista()
+{
+    ofstream archivo;
+    archivo.open("Revista.txt",ios :: trunc | ios :: app);
+    archivo<<Titulo<<" "<<Autor<<" "<<Categoria<<" "<<Editorial<<" "<<Anio<<" "<<Volumen<<" "<<Numero<<endl;
+    archivo.close();
 }

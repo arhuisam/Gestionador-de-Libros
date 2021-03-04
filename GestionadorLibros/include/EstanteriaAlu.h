@@ -44,7 +44,7 @@ class EstanteriaAlu
 	void asignarAlumno(Alumno*);
 
 
-	char* getEstanteria(); //para mostrar los materiales a q estanteria pertenece
+	char* getEstanteriaalu(); //para mostrar los materiales a q estanteria pertenece
 
 	//void crearLibro(string ,string ,string ,string ,string,string,string,string);
 	//void crearRevista(string ,string ,string ,string ,string,string,string,string,int);

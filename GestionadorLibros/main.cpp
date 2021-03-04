@@ -28,6 +28,7 @@ int main()
     Libro listaLibro[20];
     Estanteria listaEstanteria[20];
     EstanteriaAlu listaEstanteriaalu[20];
+
     do{
     cout<<"Que accion desea realizar:"<<endl;
     cout<<"1. Registrar usuario"<<endl;//cUMPLE
@@ -86,7 +87,7 @@ int main()
         cin>>y;
         switch(y){
             case 1:
-                if(nEstanteria!=0){
+                if(nEstanteria!=0 or nEstanteriaalu!=0){
                 listaRevista[nRevistas].registrarRevista();
                 cout<<left;
                 cout<<setw(3)<<'#';
@@ -97,18 +98,32 @@ int main()
                     listaEstanteria[i].mostrarDatos();
                     cout<<endl;
                     }
-                    cout<<endl;
-                do{
+                for(int i=0;i<nEstanteriaalu;i++){
+                    cout<<left<<setw(3)<<1+nEstanteria+i;
+                    listaEstanteriaalu[i].mostrarDatos();
+                   cout<<endl; 
+                }
+                    cout<<"Ingrese numero (#) :";cin>>ind;//corregir
+               /* do{
                     cout<<"Ingrese numero (#) :";cin>>ind;
-                    if(nEstanteria<ind or 0==ind){
+                    if((nEstanteria<ind or 0==ind) && (nEstanteriaalu<ind or 0==ind)){
                         cout<<"La estanteria que intenta asignar no existe "<<endl;
                     }else{
                         cout<<endl;cout<<"Asignado correctamente"<<endl;
                     }
-                }while(nEstanteria<ind or 0==ind);
-                    listaRevista[nRevistas].asignarEstanteria(&listaEstanteria[ind-1]);
-                    listaEstanteria[ind-1].agregarRevista(&listaRevista[nRevistas]);
-                    nRevistas++;
+                }while(nEstanteria<ind or 0==ind or nEstanteriaalu<ind);*/
+                    cout<<"La estanteria pertenece (Profesor=1/Alumno=2) :";
+                    cin>>aux;
+                    if(aux==1){
+                        listaRevista[nRevistas].asignarEstanteria(&listaEstanteria[ind-1]);
+                        listaEstanteria[ind-1].agregarRevista(&listaRevista[nRevistas]);
+                        nRevistas++;
+
+                    }else if(aux==2){
+                        listaRevista[nRevistas].asignarEstanteriaAlu(&listaEstanteriaalu[ind-1-nEstanteria]);
+                        listaEstanteriaalu[ind-1-nEstanteria].agregarRevista(&listaRevista[nRevistas]);
+                        nRevistas++;
+                    }
                     cout<<"Registro exitoso!"<<endl;
                 }
                 else{
@@ -119,7 +134,7 @@ int main()
             break;
             case 2:
             /// faltaaa declararr//errrrrrrrrror coregir
-            if(nEstanteria!=0){
+            if(nEstanteria!=0 or nEstanteriaalu!=0){
                 listaLibro[nLibros].registrarLibro();
                 cout<<left;
                 cout<<setw(3)<<'#';
@@ -130,19 +145,33 @@ int main()
                     listaEstanteria[i].mostrarDatos();
                     cout<<endl;
                 }
-                    cout<<endl;
-                do{
+                for(int i=0;i<nEstanteriaalu;i++){
+                cout<<left<<setw(3)<<1+nEstanteria+i;
+                listaEstanteriaalu[i].mostrarDatos();
+                cout<<endl; 
+                }
+                cout<<"Ingrese numero (#) :";cin>>ind;//corregir
+              /*  do{
                     cout<<"Ingrese numero (#) :";cin>>ind;//corregir
-                    if(nEstanteria or 0==ind){
+                    if((nEstanteria or 0==ind)&& (nEstanteriaalu<ind or 0==ind)){
                         cout<<"La estanteria que intenta asignar no existe "<<endl;
                     }else{
                         cout<<endl;cout<<"Asignado correctamente"<<endl;
                     }
-                }while(nEstanteria<ind or 0==ind);
-                listaLibro[nLibros].asignarEstanteria(&listaEstanteria[ind-1]);
-                listaEstanteria[ind-1].agregarLibro(&listaLibro[nLibros]);
-                nLibros++;
-                cout<<"Registro exitoso!"<<endl;
+                }while(nEstanteria<ind or 0==ind  or nEstanteriaalu<ind);*/
+                    cout<<"La estanteria pertenece (Profesor=1/Alumno=2)";
+                    cin>>aux;
+                    if(aux==1){
+                        listaLibro[nLibros].asignarEstanteria(&listaEstanteria[ind-1]);
+                        listaEstanteria[ind-1].agregarLibro(&listaLibro[nLibros]);
+                        nLibros++;
+
+                    }else if(aux==2){
+                        listaLibro[nLibros].asignarEstanteriaAlu(&listaEstanteriaalu[ind-1-nEstanteria]);
+                        listaEstanteriaalu[ind-1+nEstanteria].agregarLibro(&listaLibro[nLibros]);
+                        nLibros++;
+                    }
+                    cout<<"Registro exitoso!"<<endl;
             }
             else{
             cout<<"No existen estanterias para poder realizar esta accion!"<<endl;
@@ -649,7 +678,7 @@ int main()
                             case 1:
                                 for(int i = 0; i <  nProf; i++)
                                 {
-
+                                    listaProfesor[i].imprimirProfesor();
                                 }
                                 //archivo.close();
                                 cout<<"Impresion exitosa!"<<endl;
@@ -669,6 +698,9 @@ int main()
 				                system("CLS");
                             break;
                             case 3:
+
+
+
                                 cout<<"Retrocediendo..."<<endl;
                                 system("PAUSE");
 				                system("CLS");
@@ -692,23 +724,19 @@ int main()
                         switch(p)
                         {
                             case 1:
-	                            //archivo.open("Libros.txt", ios::out);
                                 for(int i = 0; i <  nLibros; i++)
                                 {
-                                    //archivo<<listaLibro[i].mostrarDatos()<<endl;
+                                    listaLibro[i].imprimirLibro();
                                 }
-                                //archivo.close();
                                 cout<<"Impresion exitosa!"<<endl;
                                 system("PAUSE");
 				                system("CLS");
                             break;
                             case 2:
-	                            //archivo.open("Revista.txt", ios::out);
                                 for(int i = 0; i <  nRevistas; i++)
                                 {
-                                    //archivo<<listaRevista[i].mostrarDatos()<<endl;
+                                    listaRevista[i].imprimirRevista();
                                 }
-                                //archivo.close();
                                 cout<<"Impresion exitosa!"<<endl;
                                 system("PAUSE");
 				                system("CLS");
@@ -729,7 +757,22 @@ int main()
 
                 break;
                 case 3:
+                    cout<<"Que tipo de estanteria desea imprimir"<<endl;
+                    cout<<"1. Estanteria de alumnos"<<endl;
+                    cout<<"2. Estanteria de profesores"<<endl;
+                    cin>>p;
+                    switch(p)
+                    {
+                        case 1:
 
+                        break;
+                        case 2:
+                        
+                        break;
+                        default:
+                        
+                        break;
+                    }
                 break;
                 case 4:
                     cout<<"Retrocediendo..."<<endl;

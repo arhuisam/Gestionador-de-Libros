@@ -2,6 +2,8 @@
 #include<iostream>
 #include <string>
 #include <iomanip>
+#include <fstream>
+
 using namespace std;
 
 
@@ -33,4 +35,14 @@ void Libro::modificar(){
 }
 void Libro:: asignarEstanteria(Estanteria*estante){
     estanteria=estante;
+}
+void Libro :: asignarEstanteriaAlu(EstanteriaAlu*estantealu){
+    estanteriaAlu=estantealu;
+}
+
+void Libro :: imprimirLibro(){
+    ofstream archivo;
+    archivo.open("Libros.txt",ios :: trunc | ios :: app);
+    archivo<<Titulo<<" "<<Autor<<" "<<Categoria<<" "<<Editorial<<" "<<Edicion<<" "<<Ciudad<<endl;
+    archivo.close();
 }
